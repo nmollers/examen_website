@@ -468,3 +468,26 @@ grid-template-columns:1fr;
 }
 
 }
+
+.onderbouwing{
+margin-top:15px;
+}
+
+.onderbouwing h3{
+font-size:18px;
+margin-bottom:10px;
+}
+
+.onderbouwing-lijst{
+list-style:none;
+padding:0;
+}
+
+.onderbouwing-lijst li{
+background:#f9fafb;
+padding:12px;
+border-radius:8px;
+margin-bottom:10px;
+font-size:14px;
+line-height:1.5;
+}

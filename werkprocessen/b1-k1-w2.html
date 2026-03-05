@@ -92,28 +92,26 @@
         <div class="tools">
           <h3>Tools</h3>
 
-          <span>Draw.io</span>
-          <span>Figma</span>
-          <span>Lucidchart</span>
-          <span>Visual Studio Code</span>
+          <span>Microsoft Word</span>
+          <span>Mermaid</span>
         </div>
       </div>
 
-      <!-- UITGANGSPUNTEN -->
+      <!-- Functionele eisen -->
 
       <div class="info-card">
-        <h2>Uitgangspunten van het ontwerp</h2>
+        <h2>Functionele eisen voor het ontwerp</h2>
 
         <ul class="project-list">
-          <li>De huidige website wordt vervangen door een nieuwe website.</li>
-
-          <li>Hosting en domeinnaam blijven hetzelfde.</li>
-
-          <li>De website wordt eerst in het Nederlands ontwikkeld.</li>
-
-          <li>Content zoals teksten en afbeeldingen worden later aangeleverd.</li>
-
-          <li>De website moet toegankelijk zijn op desktop en mobiel.</li>
+          <li>Een homepagina met 4 duidelijke knoppen die bezoekers naar relevante informatie stuurt</li>
+          <li>Subpagina’s met als doel een bepaalde doelgroep te informeren</li>
+          <li>Een contactformulier waar bezoekers eenvoudig contact met het bedrijf kunnen opnemen</li>
+          <li>Een bevestigingsbericht nadat een bezoeker het contactformulier heeft ingevuld en gestuurd</li>
+          <li>De optie om video’s toe te voegen aan de homepagina</li>
+          <li>
+            Een duidelijke en eenvoudige navigatiestructuur zodat gebruikers makkelijk de juiste informatie vinden (4
+            grote knoppen op de landingspage)
+          </li>
         </ul>
       </div>
 
@@ -123,34 +121,115 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
-          <button class="tab active" data-tab="documents">Documenten</button>
-
           <button class="tab" data-tab="screenshots">Screenshots</button>
-
-          <button class="tab" data-tab="reflection">Reflecties</button>
-        </div>
-
-        <!-- DOCUMENTEN -->
-
-        <div class="tab-content active" id="documents">
-          <a href="../assets/documenten/ontwerp-document.pdf" class="bewijs-item"> Software ontwerp document </a>
-
-          <a href="../assets/documenten/usecase.pdf" class="bewijs-item"> Use Case diagram </a>
-
-          <a href="../assets/documenten/flowchart.pdf" class="bewijs-item"> Flowchart ontwerp </a>
         </div>
 
         <!-- SCREENSHOTS -->
 
         <div class="tab-content" id="screenshots">
           <div class="screenshots-grid">
-            <img src="../assets/images/usecase.png" alt="Use case diagram" />
+            <div class="screenshot-card">
+              <img src="../assets/UseCaseDiagram_gebruikersinterface.png" />
+              <div class="onderbouwing">
+                <h3>Onderbouwing Use Case Diagram</h3>
 
-            <img src="../assets/images/flowchart.png" alt="Flowchart" />
+                <ul class="onderbouwing-lijst">
+                  <li>
+                    <strong>Haalbaarheid</strong><br />
+                    De functionaliteiten in het use case diagram, zoals navigeren door de website, het bekijken van
+                    video's en het gebruiken van het contactformulier, zijn eenvoudig te realiseren. Deze
+                    functionaliteiten vereisen geen complexe backend en kunnen grotendeels met HTML, CSS en JavaScript
+                    worden ontwikkeld.
+                  </li>
 
-            <img src="../assets/images/wireframe.png" alt="Wireframe ontwerp" />
+                  <li>
+                    <strong>Privacy (AVG)</strong><br />
+                    Gebruikers hoeven alleen persoonsgegevens in te vullen wanneer zij contact willen opnemen via het
+                    contactformulier. De website vraagt geen onnodige informatie en verwerkt alleen gegevens die
+                    noodzakelijk zijn voor communicatie.
+                  </li>
 
-            <img src="../assets/images/klassendiagram.png" alt="Klassendiagram" />
+                  <li>
+                    <strong>Security (OWASP)</strong><br />
+                    De gebruikersinterface wordt beschermd tegen beveiligingsrisico’s zoals Cross-Site Scripting (XSS)
+                    door invoervelden te filteren en te valideren. Daarnaast tonen foutmeldingen geen technische
+                    details, waardoor informatielekken worden voorkomen.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="screenshot-card">
+              <img src="../assets/Flowchart_programmalogica.png" />
+              <div class="onderbouwing">
+                <h3>Onderbouwing Flowchart</h3>
+
+                <ul class="onderbouwing-lijst">
+                  <li>
+                    <strong>Haalbaarheid</strong><br />
+                    De programmalogica van de website is eenvoudig en overzichtelijk. Gebruikers navigeren vanaf de
+                    homepage naar verschillende subpagina’s en kunnen via een contactformulier contact opnemen met de
+                    opdrachtgever. Deze logica kan eenvoudig worden geïmplementeerd met standaard webtechnieken zoals
+                    HTML, CSS en JavaScript.
+                  </li>
+
+                  <li>
+                    <strong>Privacy (AVG)</strong><br />
+                    Persoonsgegevens worden alleen verwerkt wanneer een gebruiker vrijwillig het contactformulier
+                    invult. De ingevoerde gegevens worden uitsluitend gebruikt om contact op te nemen met de gebruiker
+                    en worden niet voor andere doeleinden opgeslagen of gedeeld.
+                  </li>
+
+                  <li>
+                    <strong>Security (OWASP)</strong><br />
+                    De programmalogica bevat invoervalidatie om ongeldige of schadelijke invoer te voorkomen. Daarnaast
+                    wordt de website via HTTPS aangeboden voor veilige dataverzending. Ook zijn 404-pagina’s ingericht
+                    zodat gebruikers geen toegang krijgen tot niet-bestaande routes of pagina’s.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="screenshot-card">
+              <img src="../assets/WireFrame_Ontwerp.png" />
+
+              <h3>Wireframe</h3>
+
+              <p>
+                Dit wireframe toont de basisstructuur van de website en helpt bij het bepalen van de layout en
+                navigatie.
+                Dit is het bestand wat wij van de klant hebben ontvangen en waar wij ons ontwerp op hebben gebaseerd.
+              </p>
+            </div>
+
+            <div class="screenshot-card">
+              <img src="../assets/Klassendiagram_gegevensstructuur.png" />
+              <div class="onderbouwing">
+                <h3>Onderbouwing Klassendiagram</h3>
+
+                <ul class="onderbouwing-lijst">
+                  <li>
+                    <strong>Haalbaarheid</strong><br />
+                    Het gegevensmodel bevat drie klassen: <em>Page</em>, <em>ContactForm</em> en <em>VideoPlayer</em>.
+                    Dit is een eenvoudige structuur die goed te implementeren is met HTML, CSS en JavaScript. Hierdoor
+                    blijft de applicatie technisch haalbaar en eenvoudig te onderhouden.
+                  </li>
+
+                  <li>
+                    <strong>Privacy (AVG)</strong><br />
+                    De website verwerkt alleen noodzakelijke persoonsgegevens via het contactformulier (naam, e-mail en
+                    bericht). Deze gegevens worden uitsluitend gebruikt om contact op te nemen met de gebruiker.
+                  </li>
+
+                  <li>
+                    <strong>Security (OWASP)</strong><br />
+                    Om beveiligingsrisico’s te beperken worden invoervelden gevalideerd en wordt de website via HTTPS
+                    aangeboden. Dit helpt tegen injectie-aanvallen zoals SQL-injecties en tegen onveilige dataverzending
+                    uit de OWASP Top 10.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
