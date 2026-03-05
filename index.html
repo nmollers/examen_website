@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Noah | Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="bg-gray-950 text-white font-sans">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Noah.dev</h1>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Over mij</a></li>
+          <li><a href="#projects">Projecten</a></li>
+          <li><a href="#skills">Vaardigheden</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div>
+        <h1>Hallo, ik ben <span class="highlight">Noah</span></h1>
+
+        <p>Software developer met interesse in webapplicaties, SaaS-oplossingen en moderne softwareontwikkeling.</p>
+
+        <a href="#projects" class="btn"> Bekijk mijn projecten </a>
+      </div>
+    </section>
+
+    <!-- OVER MIJ -->
+    <section id="about" class="section">
+      <h2>Over mij</h2>
+
+      <p>
+        Ik ben een developer met een passie voor technologie en softwareontwikkeling. Ik werk graag aan het bouwen van
+        webapplicaties, SaaS-platforms en andere digitale oplossingen. Mijn doel is om gebruiksvriendelijke, efficiënte
+        en schaalbare applicaties te ontwikkelen.
+      </p>
+    </section>
+
+    <!-- PROJECTEN -->
+    <section id="projects" class="section">
+      <h2>Projecten</h2>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>PowerTrack</h3>
+          <p>Een fitness applicatie voor het bijhouden van trainingen, calorieën en krachtprogressie.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>TraderMind</h3>
+          <p>Een trading journal applicatie waarin traders hun trades, emoties en prestaties kunnen analyseren.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Offerte Manager</h3>
+          <p>Een applicatie voor bedrijven om offertes te beheren en te volgen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VAARDIGHEDEN -->
+    <section id="skills" class="section">
+      <h2>Vaardigheden</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, Tailwind, JavaScript, React</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <p>PHP, Symfony, Firebase</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <p>Git, GitHub, VS Code, Figma</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <form id="contactForm">
+        <input type="text" placeholder="Naam" required />
+
+        <input type="email" placeholder="E-mail" required />
+
+        <textarea placeholder="Bericht" required></textarea>
+
+        <button type="submit">Verstuur bericht</button>
+      </form>
+
+      <p id="successMessage" class="hidden">Bericht succesvol verzonden!</p>
+    </section>
+
+    <footer>© 2026 Noah - Portfolio</footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
