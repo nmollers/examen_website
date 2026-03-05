@@ -194,3 +194,142 @@ text-align:center;
 padding:40px;
 color:#6b7280;
 }
+
+/* BEWIJS PAGINA */
+
+.bewijs-page{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+
+.back-link{
+color:#2563eb;
+text-decoration:none;
+display:block;
+margin-bottom:20px;
+}
+
+.bewijs-intro{
+color:#6b7280;
+margin-bottom:40px;
+}
+
+
+
+/* INFO CARD */
+
+.info-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.05);
+margin-bottom:40px;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:20px;
+}
+
+.tags span{
+background:#dbeafe;
+color:#2563eb;
+padding:6px 10px;
+border-radius:6px;
+margin-right:6px;
+display:inline-block;
+margin-top:6px;
+}
+
+.tools span{
+background:#e5e7eb;
+padding:6px 10px;
+border-radius:6px;
+margin-right:6px;
+}
+
+
+
+/* BEWIJSSTUKKEN */
+
+.bewijs-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.05);
+margin-bottom:40px;
+}
+
+.tabs{
+display:flex;
+gap:15px;
+margin:20px 0;
+}
+
+.tab{
+padding:8px 14px;
+border-radius:6px;
+border:none;
+background:#f3f4f6;
+cursor:pointer;
+}
+
+.tab.active{
+background:#2563eb;
+color:white;
+}
+
+.upload-box{
+border:2px dashed #d1d5db;
+padding:40px;
+text-align:center;
+border-radius:10px;
+color:#6b7280;
+}
+
+
+
+/* REFLECTIE */
+
+.reflectie-card{
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.green{
+background:#ecfdf5;
+}
+
+.orange{
+background:#fff7ed;
+}
+
+.blue{
+background:#eff6ff;
+}
+
+.purple{
+background:#f5f3ff;
+}
+
+
+
+/* RESULTAAT */
+
+.resultaat{
+background:#e0ecff;
+padding:30px;
+border-radius:12px;
+}
+
+.result-buttons{
+margin-top:20px;
+}
+
+.result-buttons button{
+margin-right:10px;
+}
