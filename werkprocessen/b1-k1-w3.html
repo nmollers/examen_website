@@ -63,15 +63,15 @@
         <h2>Wat heb ik gedaan?</h2>
 
         <p>
-          Tijdens dit werkproces heb ik de website ontwikkeld met HTML, CSS en JavaScript. Ik heb onder andere de
-          navigatiestructuur gebouwd, de verschillende pagina’s ontwikkeld en een contactformulier geïmplementeerd.
+          Tijdens dit proces heb ik de 2 use cases ontwikkeld met HTML, CSS en JavaScript. Ik heb onder andere de 4
+          knoppen op de homepage en een contactformulier geïmplementeerd.
         </p>
 
         <div class="info-grid">
           <div>
             <h3>Mijn rol</h3>
 
-            <p>Software developer – verantwoordelijk voor het realiseren van de functionaliteiten van de website.</p>
+            <p>Software developer – verantwoordelijk voor het realiseren van de 2 use cases van de website.</p>
           </div>
 
           <div>
@@ -92,8 +92,6 @@
 
           <span>Visual Studio Code</span>
           <span>GitHub</span>
-          <span>Figma</span>
-          <span>Chrome DevTools</span>
         </div>
       </div>
 
@@ -121,6 +119,8 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
+          <button class="tab" data-tab="usecases">Use Cases</button>
+
           <button class="tab active" data-tab="screenshots">Screenshots</button>
 
           <button class="tab" data-tab="videos">Video's</button>
@@ -128,7 +128,58 @@
           <button class="tab" data-tab="code">Code</button>
 
           <button class="tab" data-tab="versioncontrol">Version Control</button>
+        </div>
 
+        <!--Use Cases-->
+        <div class="tab-content" id="usecases">
+          <div class="usecase-grid">
+            <div class="usecase-card">
+              <h3>Use Case 1 – Contactformulier verzenden</h3>
+
+              <p><strong>Actor:</strong> Bezoeker</p>
+
+              <h4>Preconditie</h4>
+              <p>De gebruiker bevindt zich op de contactpagina.</p>
+
+              <h4>Beschrijving</h4>
+
+              <ol class="usecase-steps">
+                <li>De gebruiker opent de contactpagina</li>
+                <li>De gebruiker vult zijn naam in</li>
+                <li>De gebruiker vult zijn e-mailadres in</li>
+                <li>De gebruiker schrijft een bericht</li>
+                <li>De gebruiker klikt op verzenden</li>
+                <li>Het systeem controleert de invoer</li>
+                <li>Het systeem verstuurt het bericht</li>
+                <li>Het systeem toont een bevestiging</li>
+              </ol>
+
+              <h4>Postconditie</h4>
+              <p>Het bericht is succesvol verzonden.</p>
+            </div>
+
+            <div class="usecase-card">
+              <h3>Use Case 2 – Navigeren naar een subpagina</h3>
+
+              <p><strong>Actor:</strong> Bezoeker</p>
+
+              <h4>Preconditie</h4>
+              <p>De gebruiker bevindt zich op de homepagina.</p>
+
+              <h4>Beschrijving</h4>
+
+              <ol class="usecase-steps">
+                <li>De gebruiker opent de homepagina</li>
+                <li>De gebruiker ziet vier knoppen</li>
+                <li>De gebruiker klikt op een knop</li>
+                <li>Het systeem opent de subpagina</li>
+                <li>De gebruiker bekijkt de informatie</li>
+              </ol>
+
+              <h4>Postconditie</h4>
+              <p>De gebruiker bevindt zich op de gekozen subpagina.</p>
+            </div>
+          </div>
         </div>
 
         <!-- SCREENSHOTS -->
@@ -141,7 +192,6 @@
               <h3>Homepage</h3>
 
               <p>De homepage van de website met navigatie naar verschillende onderdelen van de website.</p>
-
             </div>
 
             <div class="screenshot-card">
@@ -190,20 +240,18 @@
 
         <div class="tab-content" id="code">
           <div class="info-card">
+            <h2>Contactformulier implementatie</h2>
 
-<h2>Contactformulier implementatie</h2>
+            <p>
+              Voor de website heb ik een contactformulier ontwikkeld waarmee bezoekers eenvoudig contact kunnen opnemen.
+              Het formulier bevat invoervelden voor naam, telefoonnummer, e-mail en een bericht. Wanneer een gebruiker
+              het formulier verzendt, worden de gegevens via een PHP script (PHPMailer) verwerkt en verstuurd naar het
+              e-mailadres van de opdrachtgever. Daarna krijgt de gebruiker een bevestiging dat het bericht succesvol is
+              verzonden.
+            </p>
 
-<p>
-Voor de website heb ik een contactformulier ontwikkeld waarmee bezoekers
-eenvoudig contact kunnen opnemen. Het formulier bevat invoervelden voor
-naam, telefoonnummer, e-mail en een bericht. Wanneer een gebruiker het
-formulier verzendt, worden de gegevens via een PHP script (PHPMailer) verwerkt en
-verstuurd naar het e-mailadres van de opdrachtgever. Daarna krijgt de gebruiker een bevestiging dat het bericht succesvol is verzonden.
-</p>
-
-<div class="code-block">
-
-<pre><code>
+            <div class="code-block">
+              <pre><code>
 
 &lt;section id="contact-section" class="bg-[#b4955f] py-10"&gt;
 
@@ -238,115 +286,95 @@ verstuurd naar het e-mailadres van de opdrachtgever. Daarna krijgt de gebruiker 
 &lt;/section&gt;
 
 </code></pre>
-
-</div>
-
-</div>
+            </div>
+          </div>
           >
         </div>
 
-      <!--Version Control-->
-      <div class="tab-content" id="versioncontrol">
-                <h3>Versiebeheer met Git en GitHub</h3>
-                <p>
-                  Tijdens de ontwikkeling van de website heb ik gebruik gemaakt van Git
-                    voor versiebeheer. Git maakt het mogelijk om wijzigingen in de code
-                    bij te houden en eerdere versies van het project terug te halen.
-                    De repository van het project is opgeslagen op GitHub.
-                  </p>
+        <!--Version Control-->
+        <div class="tab-content" id="versioncontrol">
+          <h3>Versiebeheer met Git en GitHub</h3>
+          <p>
+            Tijdens de ontwikkeling van de website heb ik gebruik gemaakt van Git voor versiebeheer. Git maakt het
+            mogelijk om wijzigingen in de code bij te houden en eerdere versies van het project terug te halen. De
+            repository van het project is opgeslagen op GitHub.
+          </p>
 
-                    <a href="https://github.com/USERNAME/PROJECTNAAM"
-                    class="btn-primary" target="_blank">
-                    Bekijk GitHub repository
-                    </a>
+          <a href="https://github.com/USERNAME/PROJECTNAAM" class="btn-primary" target="_blank">
+            Bekijk GitHub repository Site Thomas
+          </a>
 
+          <a href="https://github.com/nmollers/examen_website" class="btn-primary" target="_blank">
+            Bekijk GitHub repository Examen Website
+          </a>
 
-                    <div class="screenshots-grid">
+          <div class="screenshots-grid">
+            <div class="screenshot-card">
+              <img src="../assets/GitThomas.png" />
 
+              <h3>GitHub repository</h3>
 
-                    <div class="screenshot-card">
+              <p>
+                De volledige broncode van het project staat opgeslagen in een GitHub repository. Hier worden alle
+                bestanden van het project beheerd.
+              </p>
+            </div>
 
-                    <img src="../assets/images/github-repo.png">
+            <div class="screenshot-card">
+              <img src="../assets/GitThomasCommit.png" />
 
-                    <h3>GitHub repository</h3>
+              <h3>Commit geschiedenis site Thomas</h3>
 
-                    <p>
-                    De volledige broncode van het project staat opgeslagen
-                    in een GitHub repository. Hier worden alle bestanden
-                    van het project beheerd.
-                    </p>
+              <p>
+                GitHub houdt een geschiedenis bij van alle wijzigingen die in het project zijn gemaakt. Hierdoor kan de
+                ontwikkeling van de software worden gevolgd. Tijdens dit project hebben wij 2 jaar terug niet veel commits gedaan omdat we nog lerend
+                waren hoe git werkte.
+              </p>
+            </div>
 
-                    </div>
+            <div class="screenshot-card">
+              <img src="../assets/" />
 
+              <h3>Commit geschiedenis Examen Website</h3>
 
+              <p>
+                In de commit geschiedenis van de examen website is te zien dat er regelmatig commits zijn gemaakt tijdens het ontwikkelproces. Hierdoor is goed te volgen hoe de software zich heeft ontwikkeld en welke wijzigingen er zijn aangebracht.
+                Dit is een stuk beter dan de commit geschiedenis van de site Thomas omdat hier meer commits zijn gemaakt en er dus beter te volgen is hoe de software zich heeft ontwikkeld.
+              </p>
+            </div>
 
-                <div class="screenshot-card">
+            <div class="screenshot-card">
+              <img src="../assets/GitProjectStrcutuurThoms.png" />
 
-                <img src="../assets/images/github-commits.png">
+              <h3>Project structuur</h3>
 
-                <h3>Commit geschiedenis</h3>
-
-                <p>
-                GitHub houdt een geschiedenis bij van alle wijzigingen
-                die in het project zijn gemaakt. Hierdoor kan de
-                ontwikkeling van de software worden gevolgd.
-                </p>
-
-                </div>
-
-
-
-                <div class="screenshot-card">
-
-                <img src="../assets/images/git-workflow.png">
-
-                <h3>Git workflow</h3>
-
-                <p>
-                Tijdens het ontwikkelen heb ik wijzigingen lokaal
-                opgeslagen met Git commits en vervolgens gepusht
-                naar de GitHub repository.
-                </p>
-
-                </div>
-
-
-                <div class="screenshot-card">
-
-                <img src="../assets/images/github-files.png">
-
-                <h3>Project structuur</h3>
-
-                <p>
-                De repository bevat de volledige projectstructuur
-                van de website inclusief HTML, CSS en JavaScript bestanden.
-                </p>
-
-                </div>
-
-
-                </div>
-
-                </div>
-
-      <!-- RESULTAAT -->
-
-      <div class="resultaat">
-        <h2>Resultaat / Eindproduct</h2>
-
-        <p>
-          Het resultaat is een werkende website met verschillende pagina’s, een contactformulier en een responsieve
-          layout die goed werkt op desktop en mobiel.
-        </p>
-
-        <div class="result-buttons">
-          <a href="https://nmollers.github.io/thomasbrull-site/" class="btn-primary"> Bekijk website </a>
-
-          <a href="" class="btn-outline"> Download documentatie </a>
+              <p>
+                De repository bevat de volledige projectstructuur van de website inclusief HTML, CSS en JavaScript
+                bestanden.
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- RESULTAAT -->
+
+        <div class="resultaat">
+          <h2>Resultaat / Eindproduct</h2>
+
+          <p>
+            Het resultaat is een werkende website met verschillende pagina’s, een contactformulier en een responsieve
+            layout die goed werkt op desktop en mobiel.
+          </p>
+
+          <div class="result-buttons">
+            <a href="https://nmollers.github.io/thomasbrull-site/" class="btn-primary"> Bekijk website </a>
+
+            <a href="" class="btn-outline"> Download documentatie </a>
+          </div>
+        </div>
+
+        <script src="../js/tabs.js"></script>
       </div>
     </section>
-
-    <script src="../js/tabs.js"></script>
   </body>
 </html>
