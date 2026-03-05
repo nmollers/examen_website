@@ -502,3 +502,39 @@ padding:40px 20px;
 }
 
 }
+
+.testcase-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+margin-top:20px;
+}
+
+.testcase-block h4{
+margin-bottom:10px;
+}
+
+.test-table{
+width:100%;
+border-collapse:collapse;
+}
+
+.test-table th{
+background:#f3f4f6;
+padding:10px;
+text-align:left;
+}
+
+.test-table td{
+padding:10px;
+border-bottom:1px solid #e5e7eb;
+font-size:14px;
+}
+
+@media (max-width:900px){
+
+.testcase-grid{
+grid-template-columns:1fr;
+}
+
+}

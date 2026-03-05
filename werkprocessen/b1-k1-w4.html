@@ -52,27 +52,27 @@
 
       <h1>Test software</h1>
 
-      <p class="description">
+      <p class="intro">
         In dit werkproces heb ik de ontwikkelde website getest om te controleren of alle functionaliteiten correct
         werken. Hierbij heb ik gekeken naar de werking van het contactformulier, de navigatie tussen pagina's en de
         weergave op verschillende apparaten.
       </p>
 
-      <!-- WAT HEB IK GEDAAN -->
+      <!-- UITGEVOERDE TESTEN -->
 
       <div class="info-card">
         <h2>Uitgevoerde testen</h2>
 
         <ul class="onderbouwing-lijst">
-          <li>Testen van het contactformulier om te controleren of berichten correct worden verzonden.</li>
+          <li>Testen van het contactformulier.</li>
 
-          <li>Controleren of alle navigatieknoppen naar de juiste pagina's leiden.</li>
+          <li>Controleren of navigatieknoppen correct werken.</li>
 
-          <li>Testen van de website op verschillende schermformaten (desktop, tablet en mobiel).</li>
+          <li>Testen op verschillende schermformaten.</li>
 
-          <li>Controleren of verplichte velden correct worden gevalideerd.</li>
+          <li>Validatie van verplichte invoervelden.</li>
 
-          <li>Testen van de website in verschillende browsers.</li>
+          <li>Testen in verschillende browsers.</li>
         </ul>
       </div>
 
@@ -82,55 +82,122 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
-          <button class="tab active" data-tab="screenshots">Screenshots</button>
+          <button class="tab" data-tab="testplan">Testplan</button>
+
+          <button class="tab" data-tab="testcases">Testcases</button>
 
           <button class="tab" data-tab="videos">Video's</button>
 
-          <button class="tab" data-tab="reflection">Reflectie</button>
+          <button class="tab" data-tab="testresultaten">Testresultaten</button>
         </div>
 
-        <!-- SCREENSHOTS -->
+        <!-- TESTPLAN -->
 
-        <div class="tab-content active" id="screenshots">
-          <div class="screenshots-grid">
-            <div class="screenshot-card">
-              <img src="../assets/images/form-test.png" />
+        <div class="tab-content" id="testplan">
+          <h2>Testplan</h2>
 
-              <h3>Test van het contactformulier</h3>
+          <h3>Doel van het testplan</h3>
 
-              <p>
-                Tijdens deze test heb ik gecontroleerd of het formulier correct werkt en of verplichte velden worden
-                gevalideerd.
-              </p>
+          <p>
+            Het doel van dit testplan is om te controleren of de twee use cases die aan mij zijn toegewezen correct
+            functioneren volgens de gestelde eisen.
+          </p>
+
+          <h3>Te testen functionaliteiten</h3>
+
+          <ul class="onderbouwing-lijst">
+            <li>Navigeren via knoppen op de homepagina</li>
+
+            <li>Correct functioneren van het contactformulier</li>
+
+            <li>Validatie van invoervelden</li>
+
+            <li>Bevestigingsmelding na verzenden</li>
+          </ul>
+        </div>
+
+        <!-- TESTCASES -->
+
+        <div class="tab-content" id="testcases">
+          <h3>Testcases</h3>
+
+          <p>Onderstaande testcases controleren of de functionaliteiten van de website correct werken.</p>
+
+          <div class="testcase-grid">
+            <!-- NAVIGATIE TESTS -->
+
+            <div class="testcase-block">
+              <h4>Navigeren via knoppen op de homepagina</h4>
+
+              <table class="test-table">
+                <tr>
+                  <th>Testcase</th>
+                  <th>Actie</th>
+                  <th>Verwacht resultaat</th>
+                </tr>
+
+                <tr>
+                  <td>TC1</td>
+                  <td>Klik op knop 1</td>
+                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                </tr>
+
+                <tr>
+                  <td>TC2</td>
+                  <td>Klik op knop 2</td>
+                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                </tr>
+
+                <tr>
+                  <td>TC3</td>
+                  <td>Klik op knop 3</td>
+                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                </tr>
+
+                <tr>
+                  <td>TC4</td>
+                  <td>Klik op knop 4</td>
+                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                </tr>
+              </table>
             </div>
 
-            <div class="screenshot-card">
-              <img src="../assets/images/responsive-test.png" />
+            <!-- CONTACTFORMULIER TESTS -->
 
-              <h3>Responsive test</h3>
+            <div class="testcase-block">
+              <h4>Contactformulier</h4>
 
-              <p>
-                De website is getest op verschillende schermformaten om te controleren of de layout correct schaalt.
-              </p>
-            </div>
+              <table class="test-table">
+                <tr>
+                  <th>Testcase</th>
+                  <th>Actie</th>
+                  <th>Verwacht resultaat</th>
+                </tr>
 
-            <div class="screenshot-card">
-              <img src="../assets/images/navigation-test.png" />
+                <tr>
+                  <td>TC5</td>
+                  <td>Vul alle velden correct in</td>
+                  <td>Formulier wordt succesvol verzonden</td>
+                </tr>
 
-              <h3>Navigatie test</h3>
+                <tr>
+                  <td>TC6</td>
+                  <td>Laat verplicht veld leeg</td>
+                  <td>Foutmelding verschijnt</td>
+                </tr>
 
-              <p>
-                Alle knoppen en links op de website zijn getest om te controleren of deze naar de juiste pagina's
-                leiden.
-              </p>
-            </div>
+                <tr>
+                  <td>TC7</td>
+                  <td>Ongeldig e-mailadres invoeren</td>
+                  <td>Validatiefout verschijnt</td>
+                </tr>
 
-            <div class="screenshot-card">
-              <img src="../assets/images/browser-test.png" />
-
-              <h3>Browser test</h3>
-
-              <p>De website is getest in verschillende browsers om compatibiliteitsproblemen te voorkomen.</p>
+                <tr>
+                  <td>TC8</td>
+                  <td>Controle verwerking gegevens</td>
+                  <td>Bericht wordt correct verzonden</td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
@@ -141,72 +208,125 @@
           <div class="screenshots-grid">
             <div class="video-card">
               <video controls>
-                <source src="../assets/videos/form-test.mp4" type="video/mp4" />
+                <source src="../assets/Use Case 1.mp4" type="video/mp4" />
               </video>
 
-              <h3>Test van het contactformulier</h3>
+              <h3>Test contactformulier</h3>
 
-              <p>
-                In deze video wordt getest of het formulier correct werkt en of foutmeldingen worden weergegeven bij
-                onjuiste invoer.
-              </p>
+              <p>Demonstratie van formulier validatie.</p>
             </div>
 
             <div class="video-card">
               <video controls>
-                <source src="../assets/videos/navigation-test.mp4" type="video/mp4" />
+                <source src="../assets/Use Case 2.mp4" type="video/mp4" />
               </video>
 
               <h3>Navigatie test</h3>
 
-              <p>
-                Deze video toont hoe een gebruiker door de website kan navigeren en verschillende pagina's kan openen.
-              </p>
+              <p>Demonstratie van navigatie door website.</p>
             </div>
           </div>
         </div>
 
-        <!-- REFLECTIE -->
+        <!--Testresultaten-->
+        <div class="tab-content" id="testresultaten">
+          <h3>Testresultaten</h3>
 
-        <div class="tab-content" id="reflection">
-          <div class="reflectie-card green">
-            <h3>Wat ging goed?</h3>
+          <p>
+            Onderstaande tabel toont de resultaten van de uitgevoerde tests. Alle functionaliteiten zijn succesvol
+            getest.
+          </p>
 
-            <p>De meeste functionaliteiten werkten direct correct door het duidelijke ontwerp van de website.</p>
-          </div>
+          <div class="testcase-grid">
+            <!-- NAVIGATIE RESULTATEN -->
 
-          <div class="reflectie-card orange">
-            <h3>Wat kon beter?</h3>
+            <div class="testcase-block">
+              <h4>Navigatie via knoppen</h4>
 
-            <p>Tijdens het testen ontdekte ik dat sommige elementen op mobiel nog niet goed uitgelijnd waren.</p>
-          </div>
+              <table class="test-table">
+                <tr>
+                  <th>Testcase</th>
+                  <th>Resultaat</th>
+                  <th>Status</th>
+                </tr>
 
-          <div class="reflectie-card blue">
-            <h3>Wat heb ik geleerd?</h3>
+                <tr>
+                  <td>TC1</td>
+                  <td>Subpagina wordt correct geladen</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
 
-            <p>
-              Het testen van software is belangrijk om fouten vroeg te ontdekken en de kwaliteit van de applicatie te
-              verbeteren.
-            </p>
-          </div>
+                <tr>
+                  <td>TC2</td>
+                  <td>Subpagina wordt correct geladen</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
 
-          <div class="reflectie-card purple">
-            <h3>Hoe pas ik dit toe?</h3>
+                <tr>
+                  <td>TC3</td>
+                  <td>Subpagina wordt correct geladen</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
 
-            <p>In toekomstige projecten wil ik vaker tussentijds testen om fouten sneller te ontdekken.</p>
+                <tr>
+                  <td>TC4</td>
+                  <td>Subpagina wordt correct geladen</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- CONTACTFORMULIER RESULTATEN -->
+
+            <div class="testcase-block">
+              <h4>Contactformulier</h4>
+
+              <table class="test-table">
+                <tr>
+                  <th>Testcase</th>
+                  <th>Resultaat</th>
+                  <th>Status</th>
+                </tr>
+
+                <tr>
+                  <td>TC5</td>
+                  <td>Formulier wordt succesvol verzonden</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
+
+                <tr>
+                  <td>TC6</td>
+                  <td>Foutmelding verschijnt bij leeg veld</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
+
+                <tr>
+                  <td>TC7</td>
+                  <td>Ongeldig e-mailadres wordt geweigerd</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
+
+                <tr>
+                  <td>TC8</td>
+                  <td>Bericht wordt correct verwerkt</td>
+                  <td class="status-pass">Geslaagd</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- RESULTAAT -->
+        <!-- RESULTAAT -->
 
-      <div class="resultaat">
-        <h2>Resultaat van het testen</h2>
+        <div class="resultaat">
+          <h2>Volledig Testplan</h2>
 
-        <p>
-          Na het uitvoeren van verschillende tests werkt de website correct op verschillende apparaten en browsers.
-          Eventuele fouten zijn tijdens het testen opgespoord en opgelost.
-        </p>
+          <p>Voor het inzien van het volledige testplan kunt u hieronder op de knop klikken.</p>
+        </div>
+
+        <div class="result-buttons">
+          <a href="../assets/B1-K1-W4.docx" class="btn-primary"> Download Testplan </a>
+        </div>
       </div>
     </section>
 
