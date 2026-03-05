@@ -1,141 +1,93 @@
 <!doctype html>
 <html lang="nl">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1-K2-W2 | Communiceert met team</title>
 
-<title>B1-K2-W2 | Communiceert met team</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<link rel="stylesheet" href="../css/style.css">
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          Portfolio
+        </div>
 
-</head>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
 
-<body>
+          <li><a href="../kerntaken/b1-k1.html">B1-K1 Realiseert software</a></li>
 
-<nav class="navbar">
-<div class="nav-container">
+          <li><a href="../kerntaken/b1-k2.html" class="active">B1-K2 Werkt in team</a></li>
 
-<div class="logo">
-<span class="logo-icon">&lt;/&gt;</span>
-Portfolio
-</div>
+          <li><a href="#">Projecten</a></li>
 
-<ul class="nav-links">
+          <li><a href="#">Over mij</a></li>
+        </ul>
+      </div>
+    </nav>
 
-<li><a href="../index.html">Home</a></li>
+    <section class="bewijs-page">
+      <a href="../kerntaken/b1-k2.html" class="back-link">← Terug naar kerntaak</a>
 
-<li><a href="../kerntaken/b1-k1.html">B1-K1 Realiseert software</a></li>
+      <span class="tag">B1-K2-W2</span>
 
-<li><a href="../kerntaken/b1-k2.html" class="active">B1-K2 Werkt in team</a></li>
+      <h1>Communiceert en stemt af met team</h1>
 
-<li><a href="#">Projecten</a></li>
+      <p class="intro">
+        Tijdens het project heb ik regelmatig overleg gehad met teamleden om de voortgang van het project te bespreken.
+        Door goed te communiceren konden we problemen sneller oplossen en taken beter verdelen.
+      </p>
 
-<li><a href="#">Over mij</a></li>
+      <div class="info-card">
+        <h2>Bewijsstukken</h2>
 
-</ul>
+        <div class="tabs">
+          <button class="tab active" data-tab="overleg">Overleg</button>
 
-</div>
-</nav>
+          <button class="tab" data-tab="screenshots">Screenshots</button>
 
+          <button class="tab" data-tab="reflection">Reflectie</button>
+        </div>
 
+        <div class="tab-content active" id="overleg">
+          <h3>Teamoverleg</h3>
 
-<section class="bewijs-page">
+          <p>
+            Tijdens het project hebben we regelmatig overlegmomenten gehad waarin we de voortgang van het project
+            bespraken en afspraken maakten over de volgende stappen.
+          </p>
+        </div>
 
-<a href="../kerntaken/b1-k2.html" class="back-link">← Terug naar kerntaak</a>
+        <div class="tab-content" id="screenshots">
+          <div class="screenshots-grid">
+            <div class="screenshot-card">
+              <img src="../assets/images/team-meeting.png" />
 
-<span class="tag">B1-K2-W2</span>
+              <h3>Teamoverleg</h3>
 
-<h1>Communiceert en stemt af met team</h1>
+              <p>Screenshot van een overlegmoment binnen het projectteam.</p>
+            </div>
+          </div>
+        </div>
 
-<p class="intro">
+        <div class="tab-content" id="reflection">
+          <div class="reflectie-card blue">
+            <h3>Wat heb ik geleerd?</h3>
 
-Tijdens het project heb ik regelmatig overleg gehad met teamleden
-om de voortgang van het project te bespreken. Door goed te
-communiceren konden we problemen sneller oplossen en taken
-beter verdelen.
+            <p>
+              Goede communicatie binnen een team zorgt ervoor dat problemen sneller opgelost worden en het project
+              soepeler verloopt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</p>
-
-
-
-<div class="info-card">
-
-<h2>Bewijsstukken</h2>
-
-<div class="tabs">
-
-<button class="tab active" data-tab="overleg">Overleg</button>
-
-<button class="tab" data-tab="screenshots">Screenshots</button>
-
-<button class="tab" data-tab="reflection">Reflectie</button>
-
-</div>
-
-
-
-<div class="tab-content active" id="overleg">
-
-<h3>Teamoverleg</h3>
-
-<p>
-
-Tijdens het project hebben we regelmatig overlegmomenten
-gehad waarin we de voortgang van het project bespraken
-en afspraken maakten over de volgende stappen.
-
-</p>
-
-</div>
-
-
-
-<div class="tab-content" id="screenshots">
-
-<div class="screenshots-grid">
-
-<div class="screenshot-card">
-
-<img src="../assets/images/team-meeting.png">
-
-<h3>Teamoverleg</h3>
-
-<p>
-Screenshot van een overlegmoment binnen het projectteam.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="tab-content" id="reflection">
-
-<div class="reflectie-card blue">
-
-<h3>Wat heb ik geleerd?</h3>
-
-<p>
-Goede communicatie binnen een team zorgt ervoor dat
-problemen sneller opgelost worden en het project
-soepeler verloopt.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-</section>
-
-<script src="../js/tabs.js"></script>
-
-</body>
+    <script src="../js/tabs.js"></script>
+  </body>
 </html>
