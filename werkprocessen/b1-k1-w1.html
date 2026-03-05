@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>B1-K1-W1 Bewijsstukken</title>
+    <title>B1-K1-W1 | Bewijsstukken</title>
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
@@ -21,28 +21,30 @@
 
         <ul class="nav-links">
           <li>
-            <a href="/index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
 
-          <li class="active">B1-K1 Realiseert software</li>
+          <li>
+            <a href="../kerntaken/b1-k1.html">B1-K1 Realiseert software</a>
+          </li>
 
           <li>B1-K2 Werkt in team</li>
-
           <li>Projecten</li>
-
           <li>Over mij</li>
         </ul>
       </div>
     </nav>
 
+    <!-- PAGINA -->
+
     <section class="bewijs-page">
-      <a href="b1-k1.html" class="back-link"> ← Terug naar B1-K1 </a>
+      <a href="../kerntaken/b1-k1.html" class="back-link"> ← Terug naar kerntaak </a>
 
       <span class="tag"> B1-K1-W1 </span>
 
       <h1>Plant werkzaamheden en bewaakt voortgang</h1>
 
-      <p class="bewijs-intro">Planning maken, taken verdelen en voortgang bewaken.</p>
+      <p class="intro">Planning maken, taken verdelen en voortgang bewaken tijdens het ontwikkelproces.</p>
 
       <!-- WAT HEB IK GEDAAN -->
 
@@ -50,16 +52,16 @@
         <h2>Wat heb ik gedaan?</h2>
 
         <p>
-          Voor dit werkproces heb ik een projectplanning gemaakt voor een webapplicatie. Ik heb user stories opgesteld
-          en deze geprioriteerd volgens de MoSCoW methode. Daarnaast heb ik een sprint planning gemaakt en een Gantt
-          chart gebruikt om de planning visueel weer te geven.
+          Voor dit werkproces heb ik een projectplanning opgesteld voor een webapplicatie. Ik heb user stories
+          geschreven en deze geprioriteerd met de MoSCoW methode. Vervolgens heb ik een sprint planning gemaakt en een
+          Gantt chart opgesteld om de voortgang visueel weer te geven.
         </p>
 
         <div class="info-grid">
           <div>
             <h3>Mijn rol</h3>
 
-            <p>Product Owner / Scrum Master – verantwoordelijk voor planning en voortgangsbewaking.</p>
+            <p>Product Owner / Scrum Master — verantwoordelijk voor planning en voortgangsbewaking.</p>
           </div>
 
           <div>
@@ -68,7 +70,7 @@
             <div class="tags">
               <span>User Stories</span>
               <span>MoSCoW Prioritering</span>
-              <span>Agile/Scrum</span>
+              <span>Agile / Scrum</span>
               <span>Gantt Chart</span>
               <span>Sprint Planning</span>
             </div>
@@ -91,50 +93,76 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
-          <button class="tab active">Documenten</button>
-          <button class="tab">Code & Links</button>
-          <button class="tab">Screenshots</button>
-          <button class="tab">Video's</button>
-          <button class="tab">Reflecties</button>
+          <button class="tab active" data-tab="documents">Documenten</button>
+
+          <button class="tab" data-tab="code">Code & Links</button>
+
+          <button class="tab" data-tab="screenshots">Screenshots</button>
+
+          <button class="tab" data-tab="videos">Video's</button>
+
+          <button class="tab" data-tab="reflection">Reflecties</button>
         </div>
 
-        <div class="upload-box">
-          <p>Sleep bestanden hierheen of klik om te uploaden</p>
+        <!-- DOCUMENTEN -->
 
-          <button class="btn-outline">Selecteer bestanden</button>
-        </div>
-      </div>
+        <div class="tab-content active" id="documents">
+          <a href="../assets/documenten/planning.pdf" class="bewijs-item"> Projectplanning downloaden </a>
 
-      <!-- REFLECTIE -->
-
-      <div class="reflectie">
-        <h2>Reflectie</h2>
-
-        <div class="reflectie-card green">
-          <h3>Wat ging goed?</h3>
-
-          <p>
-            De planning was realistisch en haalbaar. Door gebruik te maken van de MoSCoW methode kon ik duidelijk
-            prioriteiten stellen.
-          </p>
+          <a href="../assets/documenten/user-stories.pdf" class="bewijs-item"> User stories document </a>
         </div>
 
-        <div class="reflectie-card orange">
-          <h3>Wat kon beter?</h3>
+        <!-- CODE -->
 
-          <p>In het begin had ik te optimistische tijdsinschattingen. Ik had meer buffer moeten inbouwen.</p>
+        <div class="tab-content" id="code">
+          <a href="https://github.com/" class="bewijs-item"> GitHub repository </a>
+
+          <a href="#" class="bewijs-item"> Scrum board link </a>
         </div>
 
-        <div class="reflectie-card blue">
-          <h3>Wat heb ik geleerd?</h3>
+        <!-- SCREENSHOTS -->
 
-          <p>Ik heb geleerd dat een goede planning essentieel is voor het succes van een project.</p>
+        <div class="tab-content" id="screenshots">
+          <img src="../assets/images/planning.png" class="bewijs-img" />
         </div>
 
-        <div class="reflectie-card purple">
-          <h3>Hoe pas ik dit toe in de toekomst?</h3>
+        <!-- VIDEO -->
 
-          <p>In toekomstige projecten wil ik meer risico's en buffers inbouwen in mijn planning.</p>
+        <div class="tab-content" id="videos">
+          <video controls width="500">
+            <source src="../assets/videos/demo.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- REFLECTIE -->
+
+        <div class="tab-content" id="reflection">
+          <div class="reflectie-card green">
+            <h3>Wat ging goed?</h3>
+
+            <p>
+              De planning was realistisch en haalbaar. Door MoSCoW prioritering kon ik duidelijk aangeven welke features
+              prioriteit hadden.
+            </p>
+          </div>
+
+          <div class="reflectie-card orange">
+            <h3>Wat kon beter?</h3>
+
+            <p>In het begin had ik te optimistische tijdsinschattingen. Ik had meer buffer moeten inbouwen.</p>
+          </div>
+
+          <div class="reflectie-card blue">
+            <h3>Wat heb ik geleerd?</h3>
+
+            <p>Een goede planning is cruciaal voor het succes van een softwareproject.</p>
+          </div>
+
+          <div class="reflectie-card purple">
+            <h3>Hoe pas ik dit toe?</h3>
+
+            <p>In toekomstige projecten wil ik meer risico's en buffers in mijn planning opnemen.</p>
+          </div>
         </div>
       </div>
 
@@ -148,11 +176,13 @@
         </p>
 
         <div class="result-buttons">
-          <button class="btn-primary">Bekijk Demo</button>
+          <a class="btn-primary"> Bekijk demo </a>
 
-          <button class="btn-outline">Download Documentatie</button>
+          <a class="btn-outline"> Download documentatie </a>
         </div>
       </div>
     </section>
+
+    <script src="../js/tabs.js"></script>
   </body>
 </html>
