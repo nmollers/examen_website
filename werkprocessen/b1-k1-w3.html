@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>B1-K1-W3 | Realiseert software</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          Portfolio
+        </div>
+
+        <ul class="nav-links">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="../kerntaken/b1-k1.html" class="active"> B1-K1 Realiseert software </a>
+          </li>
+
+          <li>
+            <a ="#">B1-K2 Werkt in team</a>
+          </li>
+
+          <li>
+            <a ="#">Projecten</a>
+          </li>
+
+          <li>
+            <a ="#">Over mij</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- PAGINA -->
+
+    <section class="bewijs-page">
+      <a href="../kerntaken/b1-k1.html" class="back-link"> ← Terug naar kerntaak </a>
+
+      <span class="tag"> B1-K1-W3 </span>
+
+      <h1>Realiseert software</h1>
+
+      <p class="intro">
+        In dit werkproces heb ik de website daadwerkelijk ontwikkeld op basis van het eerder gemaakte ontwerp. Hierbij
+        heb ik verschillende functionaliteiten geïmplementeerd en de applicatie getest.
+      </p>
+
+      <!-- WAT HEB IK GEDAAN -->
+
+      <div class="info-card">
+        <h2>Wat heb ik gedaan?</h2>
+
+        <p>
+          Tijdens dit werkproces heb ik de website ontwikkeld met HTML, CSS en JavaScript. Ik heb onder andere de
+          navigatiestructuur gebouwd, de verschillende pagina’s ontwikkeld en een contactformulier geïmplementeerd.
+        </p>
+
+        <div class="info-grid">
+          <div>
+            <h3>Mijn rol</h3>
+
+            <p>Software developer – verantwoordelijk voor het realiseren van de functionaliteiten van de website.</p>
+          </div>
+
+          <div>
+            <h3>Gebruikte technieken</h3>
+
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive design</span>
+              <span>Form validatie</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools">
+          <h3>Tools</h3>
+
+          <span>Visual Studio Code</span>
+          <span>GitHub</span>
+          <span>Figma</span>
+          <span>Chrome DevTools</span>
+        </div>
+      </div>
+
+      <!-- FUNCTIONALITEITEN -->
+
+      <div class="info-card">
+        <h2>Gerealiseerde functionaliteiten</h2>
+
+        <ul class="project-list">
+          <li>Homepage met navigatie naar verschillende subpagina’s</li>
+
+          <li>Subpagina’s met informatie voor verschillende doelgroepen</li>
+
+          <li>Contactformulier waarmee gebruikers een bericht kunnen sturen</li>
+
+          <li>Responsieve layout zodat de website werkt op desktop en mobiel</li>
+
+          <li>Integratie van video’s op de website</li>
+        </ul>
+      </div>
+
+      <!-- BEWIJSSTUKKEN -->
+
+      <div class="bewijs-card">
+        <h2>Bewijsstukken</h2>
+
+        <div class="tabs">
+          <button class="tab active" data-tab="screenshots">Screenshots</button>
+
+          <button class="tab" data-tab="videos">Video's</button>
+
+          <button class="tab" data-tab="code">Code</button>
+
+          <button class="tab" data-tab="versioncontrol">Version Control</button>
+
+        </div>
+
+        <!-- SCREENSHOTS -->
+
+        <div class="tab-content active" id="screenshots">
+          <div class="screenshots-grid">
+            <div class="screenshot-card">
+              <img src="../assets/HomePage.png" />
+
+              <h3>Homepage</h3>
+
+              <p>De homepage van de website met navigatie naar verschillende onderdelen van de website.</p>
+
+            </div>
+
+            <div class="screenshot-card">
+              <img src="../assets/ContactFormulier.png" />
+
+              <h3>Contactformulier</h3>
+
+              <p>Het contactformulier waarmee gebruikers een bericht kunnen sturen naar de opdrachtgever.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIDEO'S -->
+
+        <div class="tab-content" id="videos">
+          <div class="video-grid">
+            <div class="video-card">
+              <video controls>
+                <source src="../assets/Use Case 2.mp4" type="video/mp4" />
+              </video>
+
+              <h3>Website demonstratie</h3>
+
+              <p>
+                In deze video wordt de werking van de website getoond. Hierbij worden de verschillende pagina's en
+                navigatie van de website gedemonstreerd.
+              </p>
+            </div>
+
+            <div class="video-card">
+              <video controls>
+                <source src="../assets/Use Case 1.mp4" type="video/mp4" />
+              </video>
+
+              <h3>Contactformulier demonstratie</h3>
+
+              <p>
+                In deze video wordt het contactformulier getest en wordt getoond hoe een gebruiker een bericht kan
+                versturen. Ook wordt getoond hoe het formulier reageert op ongeldige invoer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CODE -->
+
+        <div class="tab-content" id="code">
+          <div class="info-card">
+
+<h2>Contactformulier implementatie</h2>
+
+<p>
+Voor de website heb ik een contactformulier ontwikkeld waarmee bezoekers
+eenvoudig contact kunnen opnemen. Het formulier bevat invoervelden voor
+naam, telefoonnummer, e-mail en een bericht. Wanneer een gebruiker het
+formulier verzendt, worden de gegevens via een PHP script (PHPMailer) verwerkt en
+verstuurd naar het e-mailadres van de opdrachtgever. Daarna krijgt de gebruiker een bevestiging dat het bericht succesvol is verzonden.
+</p>
+
+<div class="code-block">
+
+<pre><code>
+
+&lt;section id="contact-section" class="bg-[#b4955f] py-10"&gt;
+
+  &lt;div class="container mx-auto px-6 text-center"&gt;
+
+    &lt;h2 class="text-3xl font-bold text-white mb-6"&gt;
+      Neem contact met ons op
+    &lt;/h2&gt;
+
+    &lt;p class="text-lg text-white mb-6"&gt;
+      Heb je vragen of wil je meer informatie? Laat het ons weten!
+    &lt;/p&gt;
+
+    &lt;form action="./php/send-email.php" method="POST"&gt;
+
+      &lt;input type="text" name="name" required&gt;
+
+      &lt;input type="tel" name="phone" required&gt;
+
+      &lt;input type="email" name="email" required&gt;
+
+      &lt;textarea name="message" required&gt;&lt;/textarea&gt;
+
+      &lt;button type="submit"&gt;
+        Verzenden
+      &lt;/button&gt;
+
+    &lt;/form&gt;
+
+  &lt;/div&gt;
+
+&lt;/section&gt;
+
+</code></pre>
+
+</div>
+
+</div>
+          >
+        </div>
+
+      <!--Version Control-->
+      <div class="tab-content" id="versioncontrol">
+                <h3>Versiebeheer met Git en GitHub</h3>
+                <p>
+                  Tijdens de ontwikkeling van de website heb ik gebruik gemaakt van Git
+                    voor versiebeheer. Git maakt het mogelijk om wijzigingen in de code
+                    bij te houden en eerdere versies van het project terug te halen.
+                    De repository van het project is opgeslagen op GitHub.
+                  </p>
+
+                    <a href="https://github.com/USERNAME/PROJECTNAAM"
+                    class="btn-primary" target="_blank">
+                    Bekijk GitHub repository
+                    </a>
+
+
+                    <div class="screenshots-grid">
+
+
+                    <div class="screenshot-card">
+
+                    <img src="../assets/images/github-repo.png">
+
+                    <h3>GitHub repository</h3>
+
+                    <p>
+                    De volledige broncode van het project staat opgeslagen
+                    in een GitHub repository. Hier worden alle bestanden
+                    van het project beheerd.
+                    </p>
+
+                    </div>
+
+
+
+                <div class="screenshot-card">
+
+                <img src="../assets/images/github-commits.png">
+
+                <h3>Commit geschiedenis</h3>
+
+                <p>
+                GitHub houdt een geschiedenis bij van alle wijzigingen
+                die in het project zijn gemaakt. Hierdoor kan de
+                ontwikkeling van de software worden gevolgd.
+                </p>
+
+                </div>
+
+
+
+                <div class="screenshot-card">
+
+                <img src="../assets/images/git-workflow.png">
+
+                <h3>Git workflow</h3>
+
+                <p>
+                Tijdens het ontwikkelen heb ik wijzigingen lokaal
+                opgeslagen met Git commits en vervolgens gepusht
+                naar de GitHub repository.
+                </p>
+
+                </div>
+
+
+                <div class="screenshot-card">
+
+                <img src="../assets/images/github-files.png">
+
+                <h3>Project structuur</h3>
+
+                <p>
+                De repository bevat de volledige projectstructuur
+                van de website inclusief HTML, CSS en JavaScript bestanden.
+                </p>
+
+                </div>
+
+
+                </div>
+
+                </div>
+
+      <!-- RESULTAAT -->
+
+      <div class="resultaat">
+        <h2>Resultaat / Eindproduct</h2>
+
+        <p>
+          Het resultaat is een werkende website met verschillende pagina’s, een contactformulier en een responsieve
+          layout die goed werkt op desktop en mobiel.
+        </p>
+
+        <div class="result-buttons">
+          <a href="https://nmollers.github.io/thomasbrull-site/" class="btn-primary"> Bekijk website </a>
+
+          <a href="" class="btn-outline"> Download documentatie </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/tabs.js"></script>
+  </body>
+</html>

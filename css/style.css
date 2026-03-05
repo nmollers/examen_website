@@ -491,3 +491,18 @@ margin-bottom:10px;
 font-size:14px;
 line-height:1.5;
 }
+
+.code-block{
+background:#111827;
+color:#e5e7eb;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+overflow-x:auto;
+font-family:monospace;
+font-size:14px;
+}
+
+.code-block pre{
+margin:0;
+}
