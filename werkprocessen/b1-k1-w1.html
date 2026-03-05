@@ -61,8 +61,8 @@
 
         <p>
           Voor dit werkproces heb ik een projectplanning opgesteld voor een webapplicatie. Ik heb user stories
-          geschreven en deze geprioriteerd met de MoSCoW methode. Vervolgens heb ik een sprint planning gemaakt en een
-          Gantt chart opgesteld om de voortgang visueel weer te geven.
+          geschreven en deze geprioriteerd met de MoSCoW methode. Vervolgens heb ik een planning gemaakt met de
+          geschatte tijdsduur van het project.
         </p>
 
         <div class="info-grid">
@@ -78,20 +78,13 @@
             <div class="tags">
               <span>User Stories</span>
               <span>MoSCoW Prioritering</span>
-              <span>Agile / Scrum</span>
-              <span>Gantt Chart</span>
-              <span>Sprint Planning</span>
+              <span>Planning</span>
             </div>
           </div>
         </div>
 
         <div class="tools">
-          <h3>Tools</h3>
-
-          <span>Jira</span>
-          <span>Trello</span>
-          <span>Microsoft Project</span>
-          <span>Excel</span>
+          <h3></h3>
         </div>
       </div>
 
@@ -101,13 +94,11 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
-          <button class="tab active" data-tab="documents">Documenten</button>
+          <button class="tab active" data-tab="documents">Uitganspunten van het project</button>
 
-          <button class="tab" data-tab="code">Code & Links</button>
+          <button class="tab" data-tab="code">Technische en functionele eisen</button>
 
           <button class="tab" data-tab="screenshots">Screenshots</button>
-
-          <button class="tab" data-tab="videos">Video's</button>
 
           <button class="tab" data-tab="reflection">Reflecties</button>
         </div>
@@ -115,61 +106,76 @@
         <!-- DOCUMENTEN -->
 
         <div class="tab-content active" id="documents">
-          <a href="../assets/documenten/planning.pdf" class="bewijs-item"> Projectplanning downloaden </a>
+          <ul class="project-list">
+            <li>De huidige website wordt vervangen door een nieuwe website.</li>
 
-          <a href="../assets/documenten/user-stories.pdf" class="bewijs-item"> User stories document </a>
+            <li>Hosting en domeinnaam zijn al in gebruik en blijven ongewijzigd.</li>
+
+            <li>De website wordt in eerste instantie alleen in het Nederlands ontwikkeld.</li>
+
+            <li>De content van de website (teksten, afbeeldingen en video's) wordt later door de klant aangeleverd.</li>
+
+            <li>De website moet toegankelijk zijn op zowel desktop als mobiele apparaten.</li>
+          </ul>
         </div>
 
         <!-- CODE -->
 
         <div class="tab-content" id="code">
-          <a href="https://github.com/" class="bewijs-item"> GitHub repository </a>
-
-          <a href="#" class="bewijs-item"> Scrum board link </a>
+          <ul class="project-list">
+            <h3>Technische eisen</h3>
+            <li>De website moet responsief zijn en goed werken op zowel desktop als mobiel</li>
+            <li>De website moet basis SEO-optimalisatie bevatten zodat deze beter vindbaar is in de zoekmachines</li>
+            <li>Het contactformulier moet gegevens veilig verzenden</li>
+            <h3>Functionele eisen</h3>
+            <li>Een homepagina met 4 duidelijke knoppen die bezoekers naar relevante informatie stuurt</li>
+            <li>Subpagina’s met als doel een bepaalde doelgroep te informeren</li>
+            <li>Een contactformulier waar bezoekers eenvoudig contact met het bedrijf kunnen opnemen</li>
+            <li>Een bevestigingsbericht nadat een bezoeker het contactformulier heeft ingevuld en gestuurd</li>
+            <li>De optie om video’s toe te voegen aan de informatiepagina’s</li>
+            <li>
+              Een duidelijke en eenvoudige navigatiestructuur zodat gebruikers makkelijk de juiste informatie vinden (4
+              grote knoppen op de landingspage)
+            </li>
+          </ul>
         </div>
 
         <!-- SCREENSHOTS -->
 
         <div class="tab-content" id="screenshots">
-          <img src="../assets/images/planning.png" class="bewijs-img" />
-        </div>
-
-        <!-- VIDEO -->
-
-        <div class="tab-content" id="videos">
-          <video controls width="500">
-            <source src="../assets/videos/demo.mp4" type="video/mp4" />
-          </video>
+          <div class="screenshots-grid">
+            <img src="../assets/Userstorys(MoSCow).png" alt="Screenshot 1" />
+            <img src="../assets/GeschattePlanning.png" alt="Screenshot 2" />
+            <img src="../assets/BewakingPlanning.png" alt="Screenshot 3" />
+          </div>
         </div>
 
         <!-- REFLECTIE -->
-
         <div class="tab-content" id="reflection">
           <div class="reflectie-card green">
             <h3>Wat ging goed?</h3>
 
             <p>
-              De planning was realistisch en haalbaar. Door MoSCoW prioritering kon ik duidelijk aangeven welke features
-              prioriteit hadden.
+              De planning was realistisch en haalbaar waardoor het project mooi optijd af was.
             </p>
           </div>
 
           <div class="reflectie-card orange">
             <h3>Wat kon beter?</h3>
 
-            <p>In het begin had ik te optimistische tijdsinschattingen. Ik had meer buffer moeten inbouwen.</p>
+            <p>Vaker aan de bel trekken bij een klant wanneer er onduidelijkheden waren of we infomatie nodig hadden</p>
           </div>
 
           <div class="reflectie-card blue">
             <h3>Wat heb ik geleerd?</h3>
 
-            <p>Een goede planning is cruciaal voor het succes van een softwareproject.</p>
+            <p>Het is oke om vaker contact op te zoeken met de klant</p>
           </div>
 
           <div class="reflectie-card purple">
             <h3>Hoe pas ik dit toe?</h3>
 
-            <p>In toekomstige projecten wil ik meer risico's en buffers in mijn planning opnemen.</p>
+            <p>In toekomstige projecten zelf meer de leiding nemen in contact met de klant</p>
           </div>
         </div>
       </div>
@@ -179,14 +185,10 @@
       <div class="resultaat">
         <h2>Resultaat / Eindproduct</h2>
 
-        <p>
-          Het resultaat is een complete projectplanning met user stories, sprint planning en een werkend Scrum board.
-        </p>
+        <p>Het resultaat is een complete projectplanning met user stories, planning en een bewaakte voortgang.</p>
 
         <div class="result-buttons">
-          <a class="btn-primary"> Bekijk demo </a>
-
-          <a class="btn-outline"> Download documentatie </a>
+          <a href="../assets/B1-K1-W1.docx" class="btn-outline"> Download documentatie </a>
         </div>
       </div>
     </section>
