@@ -4,115 +4,104 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Noah | Portfolio</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio – Software Development</title>
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="bg-gray-950 text-white font-sans">
+  <body>
     <!-- NAVBAR -->
+
     <nav class="navbar">
-      <div class="container">
-        <h1 class="logo">Noah.dev</h1>
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          Portfolio
+        </div>
 
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">Over mij</a></li>
-          <li><a href="#projects">Projecten</a></li>
-          <li><a href="examenportfolio.html">Examenportfolio</a></li>
-          <li><a href="#skills">Vaardigheden</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active">Home</li>
+
+          <li>
+            <a href="b1-k1.html"> B1-K1 Realiseert software </a>
+          </li>
+
+          <li>B1-K2 Werkt in team</li>
+
+          <li>Projecten</li>
+
+          <li>Over mij</li>
         </ul>
       </div>
     </nav>
 
     <!-- HERO -->
-    <section id="home" class="hero">
-      <div>
-        <h1>Hallo, ik ben <span class="highlight">Noah</span></h1>
 
-        <p>Software developer met interesse in webapplicaties, SaaS-oplossingen en moderne softwareontwikkeling.</p>
+    <section class="hero">
+      <h1>Portfolio – Software Development</h1>
 
-        <a href="#projects" class="btn"> Bekijk mijn projecten </a>
-      </div>
-    </section>
+      <p class="subtitle"><strong>MBO Niveau 4</strong> | Software Developer</p>
 
-    <!-- OVER MIJ -->
-    <section id="about" class="section">
-      <h2>Over mij</h2>
-
-      <p>
-        Ik ben een developer met een passie voor technologie en softwareontwikkeling. Ik werk graag aan het bouwen van
-        webapplicaties, SaaS-platforms en andere digitale oplossingen. Mijn doel is om gebruiksvriendelijke, efficiënte
-        en schaalbare applicaties te ontwikkelen.
+      <p class="description">
+        Welkom op mijn examenportfolio. Hier vind je al mijn bewijsstukken en reflecties per kerntaak en werkproces.
       </p>
+
+      <div class="hero-buttons">
+        <a href="b1-k1.html" class="btn-primary"> B1-K1 Bekijken → </a>
+
+        <a class="btn-outline"> B1-K2 Bekijken → </a>
+      </div>
     </section>
 
-    <!-- PROJECTEN -->
-    <section id="projects" class="section">
-      <h2>Projecten</h2>
+    <!-- KERNTAKEN -->
 
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>PowerTrack</h3>
-          <p>Een fitness applicatie voor het bijhouden van trainingen, calorieën en krachtprogressie.</p>
+    <section class="kerntaken">
+      <h2>Kerntaken</h2>
+
+      <div class="kerntaak-grid">
+        <!-- KERNTAAK 1 -->
+
+        <div class="kerntaak-card">
+          <div class="card-icon blue">&lt;/&gt;</div>
+
+          <h3>B1-K1: Realiseert software</h3>
+
+          <p>
+            Het volledige proces van het ontwerpen, ontwikkelen, testen en opleveren van softwareoplossingen volgens
+            gestelde eisen.
+          </p>
+
+          <ul>
+            <li>W1: Plant werkzaamheden</li>
+            <li>W2: Ontwerpt software</li>
+            <li>W3: Realiseert software</li>
+            <li>W4: Test software</li>
+            <li>W5: Doet verbetervoorstellen</li>
+          </ul>
+
+          <a href="b1-k1.html" class="card-link"> Bekijk werkprocessen → </a>
         </div>
 
-        <div class="project-card">
-          <h3>TraderMind</h3>
-          <p>Een trading journal applicatie waarin traders hun trades, emoties en prestaties kunnen analyseren.</p>
-        </div>
+        <!-- KERNTAAK 2 -->
 
-        <div class="project-card">
-          <h3>Offerte Manager</h3>
-          <p>Een applicatie voor bedrijven om offertes te beheren en te volgen.</p>
+        <div class="kerntaak-card">
+          <div class="card-icon gray">👥</div>
+
+          <h3>B1-K2: Werkt in een ontwikkelteam</h3>
+
+          <p>Effectief samenwerken binnen een ontwikkelteam en communiceren met stakeholders.</p>
+
+          <ul>
+            <li>W1: Voert overleg</li>
+            <li>W2: Presenteert werk</li>
+            <li>W3: Reflecteert op werk</li>
+          </ul>
+
+          <a class="card-link"> Bekijk werkprocessen → </a>
         </div>
       </div>
     </section>
 
-    <!-- VAARDIGHEDEN -->
-    <section id="skills" class="section">
-      <h2>Vaardigheden</h2>
-
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Frontend</h3>
-          <p>HTML, CSS, Tailwind, JavaScript, React</p>
-        </div>
-
-        <div class="skill-card">
-          <h3>Backend</h3>
-          <p>PHP, Symfony, Firebase</p>
-        </div>
-
-        <div class="skill-card">
-          <h3>Tools</h3>
-          <p>Git, GitHub, VS Code, Figma</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-
-      <form id="contactForm">
-        <input type="text" placeholder="Naam" required />
-
-        <input type="email" placeholder="E-mail" required />
-
-        <textarea placeholder="Bericht" required></textarea>
-
-        <button type="submit">Verstuur bericht</button>
-      </form>
-
-      <p id="successMessage" class="hidden">Bericht succesvol verzonden!</p>
-    </section>
-
-    <footer>© 2026 Noah - Portfolio</footer>
-
-    <script src="js/script.js"></script>
+    <footer>© 2026 Software Developer Portfolio</footer>
   </body>
 </html>
