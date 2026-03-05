@@ -12,149 +12,127 @@
 
   <body class="bg-gray-950 text-white font-sans">
     <!-- NAVBAR -->
-    <nav class="bg-gray-900 shadow-lg p-4">
-      <div class="max-w-6xl mx-auto flex justify-between">
-        <h1 class="font-bold text-xl">Noah.dev</h1>
+    <nav class="navbar">
+      <div class="container">
+        <h1 class="logo">Noah.dev</h1>
 
-        <div class="space-x-6">
-          <a href="index.html">Home</a>
-          <a href="index.html#projects">Projecten</a>
-          <a href="examenportfolio.html" class="text-blue-400">Examenportfolio</a>
-        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">Over mij</a></li>
+          <li><a href="index.html#projects">Projecten</a></li>
+          <li><a href="examenportfolio.html">Examenportfolio</a></li>
+          <li><a href="index.html#skills">Vaardigheden</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
-    <!-- HEADER -->
-    <section class="py-20 text-center">
-      <h1 class="text-4xl font-bold mb-6">Examenportfolio</h1>
+    <!-- LAYOUT -->
 
-      <p class="max-w-2xl mx-auto text-gray-400">
-        Op deze pagina staan bewijzen en documenten die aantonen dat ik de kerntaken en werkprocessen van de opleiding
-        Software Developer beheers. De documenten zijn gekoppeld aan de beoordelingscriteria van het examen.
-      </p>
-    </section>
+    <div class="portfolio-layout">
+      <!-- SIDEBAR -->
 
-    <!-- KERNTAKEN -->
-    <section class="max-w-4xl mx-auto px-6 pb-20 space-y-10">
-      <!-- KERNTAAK 1 -->
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Kerntaak B1-K1</h2>
 
-      <div class="bg-gray-900 rounded-xl p-6 shadow-lg">
-        <h2 class="text-2xl font-semibold mb-6">Kerntaak B1-K1 — Realiseert software</h2>
+        <nav class="sidebar-nav">
+          <a href="#w1">W1 Planning</a>
 
-        <div class="space-y-4">
-          <!-- W1 -->
+          <a href="#w2">W2 Ontwerp</a>
 
-          <details class="bg-gray-800 p-4 rounded-lg">
-            <summary class="cursor-pointer font-semibold">B1-K1-W1 — Plant werkzaamheden en bewaakt voortgang</summary>
+          <a href="#w3">W3 Realisatie</a>
+        </nav>
+      </aside>
 
-            <div class="mt-4 space-y-3">
-              <p class="text-gray-400">
-                In dit onderdeel toon ik hoe ik mijn werkzaamheden heb gepland en hoe ik de voortgang heb bewaakt.
-              </p>
+      <!-- CONTENT -->
 
-              <a
-                href="assets/documenten/planning.pdf"
-                target="_blank"
-                class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-              >
-                Bekijk document
-              </a>
-            </div>
-          </details>
+      <main class="portfolio-content">
+        <h1 class="page-title">Kerntaak B1-K1 — Realiseert software</h1>
 
-          <!-- W2 -->
+        <!-- W1 -->
 
-          <details class="bg-gray-800 p-4 rounded-lg">
-            <summary class="cursor-pointer font-semibold">B1-K1-W2 — Ontwerpt software</summary>
+        <section id="w1" class="portfolio-section">
+          <h2>B1-K1-W1 — Planning en voortgang</h2>
 
-            <div class="mt-4 space-y-3">
-              <p class="text-gray-400">
-                Hier laat ik het ontwerp van mijn software zien, zoals wireframes, architectuur en technische keuzes.
-              </p>
+          <p>
+            Voor dit project heb ik eerst de wensen en eisen van de klant opgesteld. Daarna zijn user stories gemaakt en
+            een planning opgesteld voor de ontwikkeling van de website.
+          </p>
 
-              <a
-                href="assets/documenten/software-ontwerp.pdf"
-                target="_blank"
-                class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-              >
-                Bekijk document
-              </a>
-            </div>
-          </details>
+          <div class="portfolio-card">
+            <h3>Belangrijkste eisen</h3>
 
-          <!-- W3 -->
+            <ul>
+              <li>Homepagina met 4 navigatieknoppen</li>
+              <li>Subpagina’s voor verschillende doelgroepen</li>
+              <li>Contactformulier</li>
+              <li>Responsief design</li>
+              <li>SEO basis optimalisatie</li>
+            </ul>
+          </div>
 
-          <details class="bg-gray-800 p-4 rounded-lg">
-            <summary class="cursor-pointer font-semibold">B1-K1-W3 — Realiseert software</summary>
+          <a href="assets/documenten/B1-K1-W1.pdf" class="document-button"> Bekijk volledig document </a>
+        </section>
 
-            <div class="mt-4 space-y-3">
-              <p class="text-gray-400">Dit onderdeel bevat voorbeelden van de code en implementatie van de software.</p>
+        <!-- W2 -->
 
-              <a
-                href="assets/documenten/code-voorbeeld.pdf"
-                target="_blank"
-                class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-              >
-                Bekijk document
-              </a>
-            </div>
-          </details>
+        <section id="w2" class="portfolio-section">
+          <h2>B1-K1-W2 — Software ontwerp</h2>
 
-          <!-- W4 -->
+          <p>
+            Tijdens het ontwerpen van de software heb ik verschillende diagrammen gebruikt zoals een klassendiagram, use
+            case diagram en flowchart.
+          </p>
 
-          <details class="bg-gray-800 p-4 rounded-lg">
-            <summary class="cursor-pointer font-semibold">B1-K1-W4 — Test software</summary>
+          <div class="portfolio-card">
+            <h3>Belangrijkste onderdelen</h3>
 
-            <div class="mt-4 space-y-3">
-              <p class="text-gray-400">
-                Hier toon ik hoe ik de software heb getest en welke testmethodes zijn gebruikt.
-              </p>
+            <ul>
+              <li>Klassendiagram met Page, ContactForm en VideoPlayer</li>
+              <li>Use case diagram voor interactie gebruiker</li>
+              <li>Flowchart voor programmalogica</li>
+              <li>Privacy volgens AVG</li>
+              <li>Security volgens OWASP richtlijnen</li>
+            </ul>
+          </div>
 
-              <a
-                href="assets/documenten/testplan.pdf"
-                target="_blank"
-                class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-              >
-                Bekijk document
-              </a>
-            </div>
-          </details>
+          <a href="assets/documenten/B1-K1-W2.pdf" class="document-button"> Bekijk volledig document </a>
+        </section>
 
-          <!-- W5 -->
+        <!-- W3 -->
 
-          <details class="bg-gray-800 p-4 rounded-lg">
-            <summary class="cursor-pointer font-semibold">B1-K1-W5 — Doet verbetervoorstellen</summary>
+        <section id="w3" class="portfolio-section">
+          <h2>B1-K1-W3 — Software realisatie</h2>
 
-            <div class="mt-4 space-y-3">
-              <p class="text-gray-400">
-                In dit document beschrijf ik mogelijke verbeteringen voor de software en het ontwikkelproces.
-              </p>
+          <p>
+            Tijdens de realisatie van de software heb ik functionaliteiten ontwikkeld zoals een contactformulier en
+            navigatie naar subpagina’s.
+          </p>
 
-              <a
-                href="assets/documenten/verbeterplan.pdf"
-                target="_blank"
-                class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
-              >
-                Bekijk document
-              </a>
-            </div>
-          </details>
-        </div>
-      </div>
+          <div class="code-block">
+            <pre>
+&lt;form id="contactForm"&gt;
 
-      <!-- KERNTAAK 2 -->
+&lt;input type="text" name="name" required&gt;
 
-      <div class="bg-gray-900 rounded-xl p-6 shadow-lg">
-        <h2 class="text-2xl font-semibold mb-6">Kerntaak B1-K2</h2>
+&lt;input type="email" name="email" required&gt;
 
-        <p class="text-gray-400 mb-4">Hier staan documenten die horen bij de tweede kerntaak van het examen.</p>
+&lt;textarea name="message"&gt;&lt;/textarea&gt;
 
-        <a href="assets/documenten/kerntaak2.pdf" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
-          Bekijk document
-        </a>
-      </div>
-    </section>
+&lt;button type="submit"&gt;
+Versturen
+&lt;/button&gt;
 
-    <footer class="text-center py-10 text-gray-500">© 2026 Noah - Examenportfolio</footer>
+&lt;/form&gt;
+</pre
+            >
+          </div>
+
+          <a href="assets/documenten/B1-K1-W3.pdf" class="document-button"> Bekijk volledig document </a>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">© 2026 Noah - Examenportfolio</footer>
   </body>
 </html>
