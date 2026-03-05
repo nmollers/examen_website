@@ -1,16 +1,40 @@
-body{
-font-family:Arial;
+/* =========================
+   BASIS
+========================= */
+
+*{
+box-sizing:border-box;
 margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
 background:#f5f6f8;
 color:#1f2937;
+line-height:1.6;
+}
+
+img,video{
+max-width:100%;
+height:auto;
+}
+
+a{
+text-decoration:none;
 }
 
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar{
 background:white;
 border-bottom:1px solid #e5e7eb;
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .nav-container{
@@ -24,6 +48,7 @@ padding:20px;
 
 .logo{
 font-weight:600;
+font-size:18px;
 }
 
 .logo-icon{
@@ -35,13 +60,15 @@ margin-right:6px;
 list-style:none;
 display:flex;
 gap:25px;
-margin:0;
-padding:0;
 }
 
 .nav-links li{
 color:#6b7280;
 cursor:pointer;
+}
+
+.nav-links a{
+color:#6b7280;
 }
 
 .nav-links .active{
@@ -52,12 +79,15 @@ border-radius:6px;
 }
 
 
-
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 text-align:center;
-padding:60px 20px 40px 20px;
+padding:80px 20px 50px 20px;
+max-width:900px;
+margin:auto;
 }
 
 .hero h1{
@@ -71,22 +101,30 @@ color:#6b7280;
 }
 
 .description{
-max-width:600px;
 margin:20px auto;
 color:#6b7280;
+max-width:600px;
 }
 
 .hero-buttons{
 margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .btn-primary{
 background:#2563eb;
 color:white;
 padding:12px 22px;
 border-radius:8px;
-text-decoration:none;
-margin-right:10px;
+display:inline-block;
 }
 
 .btn-outline{
@@ -94,21 +132,24 @@ border:1px solid #2563eb;
 color:#2563eb;
 padding:12px 22px;
 border-radius:8px;
+display:inline-block;
 }
 
 
-
-/* KERNTAKEN */
+/* =========================
+   KERNTAKEN
+========================= */
 
 .kerntaken{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:40px 20px 60px 20px;
 }
 
 .kerntaken h2{
 text-align:center;
 margin-bottom:40px;
+font-size:28px;
 }
 
 .kerntaak-grid{
@@ -122,28 +163,35 @@ background:white;
 padding:30px;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:0.2s;
+}
+
+.kerntaak-card:hover{
+transform:translateY(-4px);
 }
 
 .card-icon{
 width:40px;
 height:40px;
-background:#dbeafe;
 display:flex;
 align-items:center;
 justify-content:center;
 border-radius:8px;
+background:#dbeafe;
 margin-bottom:20px;
 }
 
 .card-link{
 color:#2563eb;
-text-decoration:none;
 font-weight:500;
+margin-top:15px;
+display:inline-block;
 }
 
 
-
-/* KERNTAAK PAGE */
+/* =========================
+   KERNTAAK PAGINA
+========================= */
 
 .kerntaak-page{
 max-width:900px;
@@ -157,6 +205,8 @@ color:#2563eb;
 padding:6px 12px;
 border-radius:6px;
 font-size:14px;
+display:inline-block;
+margin-bottom:10px;
 }
 
 .kerntaak-description{
@@ -165,11 +215,13 @@ margin-bottom:40px;
 }
 
 
-
-/* WERKPROCESSEN */
+/* =========================
+   WERKPROCESSEN
+========================= */
 
 .werkproces-card{
 display:flex;
+gap:20px;
 background:white;
 padding:25px;
 border-radius:12px;
@@ -186,16 +238,13 @@ align-items:center;
 justify-content:center;
 border-radius:10px;
 font-size:24px;
-margin-right:20px;
+flex-shrink:0;
 }
 
-footer{
-text-align:center;
-padding:40px;
-color:#6b7280;
-}
 
-/* BEWIJS PAGINA */
+/* =========================
+   BEWIJS PAGINA
+========================= */
 
 .bewijs-page{
 max-width:1000px;
@@ -205,19 +254,9 @@ padding:80px 20px;
 
 .back-link{
 color:#2563eb;
-text-decoration:none;
 display:block;
 margin-bottom:20px;
 }
-
-.bewijs-intro{
-color:#6b7280;
-margin-bottom:40px;
-}
-
-
-
-/* INFO CARD */
 
 .info-card{
 background:white;
@@ -252,93 +291,16 @@ margin-right:6px;
 }
 
 
-
-/* BEWIJSSTUKKEN */
-
-.bewijs-card{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 6px 15px rgba(0,0,0,0.05);
-margin-bottom:40px;
-}
-
-.tabs{
-display:flex;
-gap:15px;
-margin:20px 0;
-}
-
-.tab{
-padding:8px 14px;
-border-radius:6px;
-border:none;
-background:#f3f4f6;
-cursor:pointer;
-}
-
-.tab.active{
-background:#2563eb;
-color:white;
-}
-
-.upload-box{
-border:2px dashed #d1d5db;
-padding:40px;
-text-align:center;
-border-radius:10px;
-color:#6b7280;
-}
-
-
-
-/* REFLECTIE */
-
-.reflectie-card{
-padding:20px;
-border-radius:10px;
-margin-bottom:15px;
-}
-
-.green{
-background:#ecfdf5;
-}
-
-.orange{
-background:#fff7ed;
-}
-
-.blue{
-background:#eff6ff;
-}
-
-.purple{
-background:#f5f3ff;
-}
-
-
-
-/* RESULTAAT */
-
-.resultaat{
-background:#e0ecff;
-padding:30px;
-border-radius:12px;
-}
-
-.result-buttons{
-margin-top:20px;
-}
-
-.result-buttons button{
-margin-right:10px;
-}
+/* =========================
+   TABS
+========================= */
 
 .tabs{
 display:flex;
 gap:10px;
 margin-top:20px;
 margin-bottom:20px;
+overflow-x:auto;
 }
 
 .tab{
@@ -347,6 +309,7 @@ background:#f3f4f6;
 border-radius:6px;
 border:none;
 cursor:pointer;
+white-space:nowrap;
 }
 
 .tab.active{
@@ -366,7 +329,6 @@ display:block;
 display:block;
 margin-bottom:10px;
 color:#2563eb;
-text-decoration:none;
 }
 
 .bewijs-img{
@@ -375,13 +337,113 @@ border-radius:8px;
 margin-top:10px;
 }
 
+
+/* =========================
+   REFLECTIE
+========================= */
+
 .reflectie-card{
 padding:20px;
 border-radius:10px;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .green{background:#ecfdf5;}
 .orange{background:#fff7ed;}
 .blue{background:#eff6ff;}
 .purple{background:#f5f3ff;}
+
+
+/* =========================
+   RESULTAAT
+========================= */
+
+.resultaat{
+background:#e0ecff;
+padding:30px;
+border-radius:12px;
+margin-top:40px;
+}
+
+.result-buttons{
+margin-top:20px;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:40px;
+color:#6b7280;
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width:900px){
+
+.kerntaak-grid{
+grid-template-columns:1fr;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.werkproces-card{
+flex-direction:column;
+}
+
+}
+
+
+/* =========================
+   RESPONSIVE MOBIEL
+========================= */
+
+@media (max-width:600px){
+
+.nav-container{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.description{
+font-size:14px;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.kerntaken{
+padding:40px 20px;
+}
+
+.bewijs-page{
+padding:40px 20px;
+}
+
+}
