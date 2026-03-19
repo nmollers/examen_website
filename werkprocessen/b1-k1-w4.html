@@ -31,7 +31,6 @@
           <li>
             <a href="../kerntaken/b1-k2.html">B1-K2 Werkt in team</a>
           </li>
-
         </ul>
       </div>
     </nav>
@@ -83,29 +82,30 @@
 
           <button class="tab" data-tab="testresultaten">Testresultaten</button>
         </div>
-
         <!-- TESTPLAN -->
 
         <div class="tab-content" id="testplan">
           <h2>Testplan</h2>
 
           <h3>Doel van het testplan</h3>
-
           <p>
-            Het doel van dit testplan is om te controleren of de twee use cases die aan mij zijn toegewezen correct
-            functioneren volgens de gestelde eisen.
+            Het doel van dit testplan is om te controleren of de functionaliteiten van de website correct functioneren
+            volgens de gestelde eisen en use cases.
           </p>
 
-          <h3>Te testen functionaliteiten</h3>
+          <h3>Use cases</h3>
+          <ul class="onderbouwing-lijst">
+            <li>UC1: Navigeren via knoppen op de homepagina</li>
+            <li>UC2: Verzenden van het contactformulier</li>
+          </ul>
 
+          <h3>Te testen functionaliteiten</h3>
           <ul class="onderbouwing-lijst">
             <li>Navigeren via knoppen op de homepagina</li>
-
             <li>Correct functioneren van het contactformulier</li>
-
             <li>Validatie van invoervelden</li>
-
             <li>Bevestigingsmelding na verzenden</li>
+            <li>Foutafhandeling bij onjuiste invoer</li>
           </ul>
         </div>
 
@@ -114,13 +114,16 @@
         <div class="tab-content" id="testcases">
           <h3>Testcases</h3>
 
-          <p>Onderstaande testcases controleren of de functionaliteiten van de website correct werken.</p>
+          <p>
+            Onderstaande testcases controleren of de functionaliteiten van de website correct werken en de use cases
+            volledig worden afgedekt.
+          </p>
 
           <div class="testcase-grid">
             <!-- NAVIGATIE TESTS -->
 
             <div class="testcase-block">
-              <h4>Navigeren via knoppen op de homepagina</h4>
+              <h4>UC1: Navigatie via homepagina</h4>
 
               <table class="test-table">
                 <tr>
@@ -131,26 +134,32 @@
 
                 <tr>
                   <td>TC1</td>
-                  <td>Klik op knop 1</td>
-                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                  <td>Klik op "Home" knop in de navigatiebalk</td>
+                  <td>Gebruiker blijft op de homepagina (/home)</td>
                 </tr>
 
                 <tr>
                   <td>TC2</td>
-                  <td>Klik op knop 2</td>
-                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                  <td>Klik op "Over ons" knop</td>
+                  <td>Gebruiker wordt doorgestuurd naar /over-ons pagina</td>
                 </tr>
 
                 <tr>
                   <td>TC3</td>
-                  <td>Klik op knop 3</td>
-                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                  <td>Klik op "Diensten" knop</td>
+                  <td>Gebruiker wordt doorgestuurd naar /diensten pagina</td>
                 </tr>
 
                 <tr>
                   <td>TC4</td>
-                  <td>Klik op knop 4</td>
-                  <td>De gebruiker wordt naar de juiste subpagina gestuurd</td>
+                  <td>Klik op "Contact" knop</td>
+                  <td>Gebruiker wordt doorgestuurd naar /contact pagina</td>
+                </tr>
+
+                <tr>
+                  <td>TC5</td>
+                  <td>Klik meerdere keren snel achter elkaar op een navigatieknop</td>
+                  <td>Pagina laadt correct zonder fouten of vastlopen</td>
                 </tr>
               </table>
             </div>
@@ -158,7 +167,7 @@
             <!-- CONTACTFORMULIER TESTS -->
 
             <div class="testcase-block">
-              <h4>Contactformulier</h4>
+              <h4>UC2: Contactformulier</h4>
 
               <table class="test-table">
                 <tr>
@@ -168,27 +177,57 @@
                 </tr>
 
                 <tr>
-                  <td>TC5</td>
-                  <td>Vul alle velden correct in</td>
-                  <td>Formulier wordt succesvol verzonden</td>
-                </tr>
-
-                <tr>
                   <td>TC6</td>
-                  <td>Laat verplicht veld leeg</td>
-                  <td>Foutmelding verschijnt</td>
+                  <td>Vul alle velden correct in en klik op verzenden</td>
+                  <td>Formulier wordt succesvol verzonden en bevestigingsmelding "Bericht verzonden" verschijnt</td>
                 </tr>
 
                 <tr>
                   <td>TC7</td>
-                  <td>Ongeldig e-mailadres invoeren</td>
-                  <td>Validatiefout verschijnt</td>
+                  <td>Laat een verplicht veld leeg en klik op verzenden</td>
+                  <td>Foutmelding "Dit veld is verplicht" verschijnt onder het lege veld</td>
                 </tr>
 
                 <tr>
                   <td>TC8</td>
-                  <td>Controle verwerking gegevens</td>
-                  <td>Bericht wordt correct verzonden</td>
+                  <td>Voer een ongeldig e-mailadres in (bijv. test@)</td>
+                  <td>Foutmelding "Voer een geldig e-mailadres in" verschijnt</td>
+                </tr>
+
+                <tr>
+                  <td>TC9</td>
+                  <td>Laat alle velden leeg en klik op verzenden</td>
+                  <td>Voor alle verplichte velden verschijnen foutmeldingen</td>
+                </tr>
+
+                <tr>
+                  <td>TC10</td>
+                  <td>Voer alleen spaties in bij invoervelden</td>
+                  <td>Validatie detecteert lege invoer en toont foutmelding</td>
+                </tr>
+
+                <tr>
+                  <td>TC11</td>
+                  <td>Voer extreem lange tekst in (bijv. 500+ karakters)</td>
+                  <td>Formulier accepteert invoer of geeft duidelijke foutmelding zonder crash</td>
+                </tr>
+
+                <tr>
+                  <td>TC12</td>
+                  <td>Klik meerdere keren snel op verzenden</td>
+                  <td>Formulier wordt slechts één keer verzonden en geen dubbele inzendingen ontstaan</td>
+                </tr>
+
+                <tr>
+                  <td>TC13</td>
+                  <td>Ververs de pagina na het invullen van het formulier</td>
+                  <td>Ingevoerde data wordt gereset of gebruiker krijgt waarschuwing</td>
+                </tr>
+
+                <tr>
+                  <td>TC14</td>
+                  <td>Controleer of de verzonden gegevens correct aankomen (bijv. via backend of e-mail)</td>
+                  <td>De ingevoerde gegevens worden correct verwerkt en opgeslagen/verzonden</td>
                 </tr>
               </table>
             </div>
