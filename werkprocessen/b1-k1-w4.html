@@ -250,50 +250,63 @@
           </div>
         </div>
 
-        <!--Testresultaten-->
+        <!-- TESTRESULTATEN -->
+
         <div class="tab-content" id="testresultaten">
           <h3>Testresultaten</h3>
 
           <p>
-            Onderstaande tabel toont de resultaten van de uitgevoerde tests. Alle functionaliteiten zijn succesvol
-            getest.
+            Onderstaande tabel toont de resultaten van alle uitgevoerde testcases. Alle functionaliteiten zijn getest op
+            basis van de opgestelde use cases. Per testcase is een resultaat en conclusie opgenomen.
           </p>
 
           <div class="testcase-grid">
             <!-- NAVIGATIE RESULTATEN -->
 
             <div class="testcase-block">
-              <h4>Navigatie via knoppen</h4>
+              <h4>UC1: Navigatie via knoppen</h4>
 
               <table class="test-table">
                 <tr>
                   <th>Testcase</th>
                   <th>Resultaat</th>
                   <th>Status</th>
+                  <th>Conclusie</th>
                 </tr>
 
                 <tr>
                   <td>TC1</td>
-                  <td>Subpagina wordt correct geladen</td>
+                  <td>Home knop houdt gebruiker op de homepagina</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Navigatie werkt correct</td>
                 </tr>
 
                 <tr>
                   <td>TC2</td>
-                  <td>Subpagina wordt correct geladen</td>
+                  <td>Over-ons pagina wordt correct geladen</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Navigatie werkt correct</td>
                 </tr>
 
                 <tr>
                   <td>TC3</td>
-                  <td>Subpagina wordt correct geladen</td>
+                  <td>Diensten pagina wordt correct geladen</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Navigatie werkt correct</td>
                 </tr>
 
                 <tr>
                   <td>TC4</td>
-                  <td>Subpagina wordt correct geladen</td>
+                  <td>Contactpagina wordt correct geladen</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Navigatie werkt correct</td>
+                </tr>
+
+                <tr>
+                  <td>TC5</td>
+                  <td>Bij meerdere klikken blijft de website stabiel zonder fouten</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Applicatie is stabiel onder herhaald gebruik</td>
                 </tr>
               </table>
             </div>
@@ -301,57 +314,85 @@
             <!-- CONTACTFORMULIER RESULTATEN -->
 
             <div class="testcase-block">
-              <h4>Contactformulier</h4>
+              <h4>UC2: Contactformulier</h4>
 
               <table class="test-table">
                 <tr>
                   <th>Testcase</th>
                   <th>Resultaat</th>
                   <th>Status</th>
-                </tr>
-
-                <tr>
-                  <td>TC5</td>
-                  <td>Formulier wordt succesvol verzonden</td>
-                  <td class="status-pass">Geslaagd</td>
+                  <th>Conclusie</th>
                 </tr>
 
                 <tr>
                   <td>TC6</td>
-                  <td>Foutmelding verschijnt bij leeg veld</td>
+                  <td>Formulier wordt succesvol verzonden en bevestigingsmelding verschijnt</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Formulier werkt correct</td>
                 </tr>
 
                 <tr>
                   <td>TC7</td>
-                  <td>Ongeldig e-mailadres wordt geweigerd</td>
+                  <td>Foutmelding verschijnt bij leeg verplicht veld</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>Validatie werkt correct</td>
                 </tr>
 
                 <tr>
                   <td>TC8</td>
-                  <td>Bericht wordt correct verwerkt</td>
+                  <td>Ongeldig e-mailadres wordt geweigerd met foutmelding</td>
                   <td class="status-pass">Geslaagd</td>
+                  <td>E-mailvalidatie werkt correct</td>
+                </tr>
+
+                <tr>
+                  <td>TC9</td>
+                  <td>Alle velden leeg → foutmeldingen verschijnen bij elk veld</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Validatie dekt alle verplichte velden</td>
+                </tr>
+
+                <tr>
+                  <td>TC10</td>
+                  <td>Spaties worden niet geaccepteerd als geldige invoer</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Inputvalidatie werkt correct</td>
+                </tr>
+
+                <tr>
+                  <td>TC11</td>
+                  <td>Lange invoer wordt correct verwerkt zonder fouten</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Formulier is robuust bij grote input</td>
+                </tr>
+
+                <tr>
+                  <td>TC12</td>
+                  <td>Meerdere keren klikken resulteert niet in dubbele verzending</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Dubbele submits worden voorkomen</td>
+                </tr>
+
+                <tr>
+                  <td>TC13</td>
+                  <td>Pagina refresh reset het formulier correct</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Gedrag bij refresh is correct</td>
+                </tr>
+
+                <tr>
+                  <td>TC14</td>
+                  <td>Gegevens komen correct aan in backend / verwerking</td>
+                  <td class="status-pass">Geslaagd</td>
+                  <td>Data wordt correct verwerkt</td>
                 </tr>
               </table>
             </div>
           </div>
         </div>
 
-        <!-- RESULTAAT -->
-
-        <div class="resultaat">
-          <h2>Volledig Testplan</h2>
-
-          <p>Voor het inzien van het volledige testplan kunt u hieronder op de knop klikken.</p>
-        </div>
-
-        <div class="result-buttons">
-          <a href="../assets/B1-K1-W4.docx" class="btn-primary"> Download Testplan </a>
-        </div>
+        <script src="../js/tabs.js"></script>
       </div>
     </section>
-
-    <script src="../js/tabs.js"></script>
   </body>
 </html>
