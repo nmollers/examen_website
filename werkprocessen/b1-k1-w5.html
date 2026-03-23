@@ -68,33 +68,39 @@
           <h3>Analyse</h3>
 
           <p>
-            Na het uitvoeren van het testplan en het opnieuw controleren van de website heb ik de website nog een keer
-            grondig geanalyseerd. Tijdens deze analyse heb ik gekeken naar de gebruikerservaring van de website en naar
-            de manier waarop bezoekers door de website navigeren.
+            De analyse van de website is uitgevoerd op basis van meerdere informatiebronnen. Hierbij is gebruik gemaakt
+            van:
+          </p>
+
+          <ul class="onderbouwing-lijst">
+            <li>De uitgevoerde testcases (TC1 t/m TC14)</li>
+            <li>De resultaten uit het testrapport</li>
+            <li>Eigen observaties tijdens het gebruik van de website</li>
+          </ul>
+
+          <p>
+            Uit de testresultaten blijkt dat de technische functionaliteiten van de website correct werken. Zo
+            functioneren de navigatie (TC1 t/m TC5) en het contactformulier (TC6 t/m TC14) zoals verwacht.
           </p>
 
           <p>
-            Uit deze analyse zijn een aantal verbeterpunten naar voren gekomen. Deze verbeteringen zijn voornamelijk
-            gericht op het verbeteren van de gebruiksvriendelijkheid, de call-to-action en de customer journey van de
-            website.
+            Tijdens het analyseren van de testresultaten en het gebruik van de website is echter gebleken dat er nog
+            verbeteringen mogelijk zijn op het gebied van gebruiksvriendelijkheid en gebruikersbegeleiding.
           </p>
-          <br />
-          <h3>Bronnen</h3>
-          <a
-            href="https://blog.hubspot.com/marketing/call-to-action-examples"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Bekijk meer voorbeelden van call-to-actions
-          </a>
-          <br />
-          <a
-            href="https://www.interaction-design.org/literature/topics/customer-journey"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Bekijk meer voorbeelden over customer journeys</a
-          >
+
+          <ul class="onderbouwing-lijst">
+            <li>
+              Uit TC1 t/m TC5 blijkt dat navigatie correct werkt, maar er ontbreekt een duidelijke vervolgstap voor de
+              gebruiker (geen call-to-action).
+            </li>
+            <li>
+              Uit TC6 blijkt dat het formulier correct verzendt, maar er wordt geen vervolgstap of bevestiging buiten de
+              pagina geboden (zoals e-mail).
+            </li>
+            <li>Uit TC7 t/m TC10 blijkt dat validatie werkt, maar deze gebeurt pas na verzenden en niet realtime.</li>
+          </ul>
+
+          <p>Op basis van deze bevindingen zijn hieronder concrete verbetervoorstellen opgesteld.</p>
         </div>
 
         <!-- VERBETERVOORSTELLEN -->
@@ -102,162 +108,163 @@
         <div class="tab-content" id="verbeteringen">
           <h3>Verbetervoorstellen</h3>
 
-          <h4>Verbetering 1 – Duidelijke call-to-action op de homepage</h4>
+          <!-- VERBETERING 1 -->
+
+          <h4>Verbetering 1 – Toevoegen van een duidelijke call-to-action</h4>
 
           <p>
-            Tijdens het bekijken van de website viel op dat de homepage geen duidelijke call-to-action bevat. Bezoekers
-            zien vier verschillende klanttypes maar worden niet duidelijk gestimuleerd om een volgende stap te nemen,
-            zoals het plannen van een gesprek of het opnemen van contact.
+            Uit testcases TC1 t/m TC5 blijkt dat de navigatie correct functioneert, maar dat gebruikers na het bekijken
+            van de homepage geen duidelijke vervolgstap krijgen.
           </p>
-          <br />
-          <h4>Voorbeelden van call-to-actions</h4>
-
-          <ul class="onderbouwing-lijst">
-            <li>Plan een kennismakingsgesprek</li>
-            <li>Neem contact op</li>
-            <li>Start een gesprek</li>
-          </ul>
-          <br />
-          <h4>Verbetervoorstel</h4>
 
           <p>
-            Onder de vier klanttypes kan een duidelijke knop worden geplaatst met bijvoorbeeld de tekst
-            <strong>“Plan een kennismakingsgesprek”</strong>. Deze knop stuurt de gebruiker naar de contactpagina
-            waardoor de bezoeker duidelijker wordt begeleid naar de volgende stap.
+            <strong>Verbetervoorstel:</strong><br />
+            Voeg onder de vier klanttypes een duidelijke knop toe met de tekst:
+            <em>“Plan een kennismakingsgesprek”</em>. Deze knop verwijst naar de contactpagina.
           </p>
-          <br />
+
+          <p>
+            <strong>Resultaat:</strong> De gebruiker wordt actief gestuurd naar het opnemen van contact, wat de
+            conversie verhoogt.
+          </p>
+
+          <!-- VERBETERING 2 -->
+
           <h4>Verbetering 2 – Verbeteren van de customer journey</h4>
 
           <p>
-            De customer journey beschrijft de stappen die een gebruiker doorloopt wanneer hij door een website
-            navigeert. Op de huidige website is deze route niet duidelijk genoeg opgebouwd.
+            Uit de analyse van de testresultaten blijkt dat de stappen die een gebruiker doorloopt niet duidelijk genoeg
+            op elkaar aansluiten.
           </p>
-          <br />
-          <h4>Huidige situatie</h4>
 
-          <ul class="onderbouwing-lijst">
-            <li>Bezoeker komt op de homepage</li>
-            <li>Bezoeker ziet vier klanttypes</li>
-            <li>Bezoeker klikt op een klanttype</li>
-            <li>Bezoeker leest informatie</li>
-            <li>Bezoeker kan contact opnemen</li>
-          </ul>
-          <br />
-          <h4>Verbetervoorstel</h4>
+          <p>
+            <strong>Verbetervoorstel:</strong><br />
+            De structuur van de website aanpassen naar:
+          </p>
 
           <ol class="onderbouwing-lijst">
-            <li><strong>Homepage</strong> – Introductie van de dienstverlening en vier klanttypes</li>
-
-            <li><strong>Informatieve pagina</strong> – Uitleg over het gekozen klanttype</li>
-
-            <li><strong>Call-to-action</strong> – Knop “Plan een gesprek”</li>
-
-            <li><strong>Contactformulier</strong> – Mogelijkheid om contact op te nemen</li>
+            <li>Homepage (introductie + klanttypes)</li>
+            <li>Informatieve pagina (uitleg)</li>
+            <li>Call-to-action knop</li>
+            <li>Contactformulier</li>
           </ol>
 
-          <p>Door deze structuur wordt de gebruiker stap voor stap begeleid naar het opnemen van contact.</p>
-          <br />
-          <h4>Verbetering 3 – Verbetering van het contactformulier</h4>
+          <p><strong>Resultaat:</strong> De gebruiker wordt stap voor stap begeleid naar het opnemen van contact.</p>
 
-          <p>Het contactformulier werkt correct maar kan nog gebruiksvriendelijker gemaakt worden.</p>
-          <br />
-          <h4>Verbetervoorstel</h4>
+          <!-- VERBETERING 3 -->
 
-          <ul class="onderbouwing-lijst">
-            <li>
-              Realtime validatie van invoervelden zodat fouten direct zichtbaar worden en niet pas na het klikken op
-              verzenden.
-            </li>
+          <h4>Verbetering 3 – Realtime validatie van het contactformulier</h4>
 
-            <li>Een bevestigingsmail sturen naar de gebruiker nadat het formulier is verzonden.</li>
-          </ul>
+          <p>Uit testcases TC7 t/m TC10 blijkt dat validatie correct werkt, maar pas na het klikken op verzenden.</p>
+
+          <p>
+            <strong>Verbetervoorstel:</strong><br />
+            Voeg realtime validatie toe zodat fouten direct zichtbaar zijn tijdens het invoeren.
+          </p>
+
+          <p><strong>Resultaat:</strong> De gebruiker krijgt direct feedback en maakt minder fouten.</p>
+
+          <!-- VERBETERING 4 -->
+
+          <h4>Verbetering 4 – Bevestigingsmail na verzenden</h4>
+
+          <p>
+            Uit testcase TC6 blijkt dat het formulier correct wordt verzonden, maar de gebruiker geen externe
+            bevestiging ontvangt.
+          </p>
+
+          <p>
+            <strong>Verbetervoorstel:</strong><br />
+            Verstuur automatisch een bevestigingsmail na het verzenden van het formulier.
+          </p>
+
+          <p><strong>Resultaat:</strong> De gebruiker heeft zekerheid dat het bericht succesvol is verzonden.</p>
         </div>
 
         <!-- PLANNING -->
+
         <div class="tab-content" id="planning">
-          <div class="info-card">
-            <h2>Planning van de verbeteringen</h2>
+          <h3>Planning van de verbeteringen</h3>
 
-            <p>
-              Onderstaande planning toont de stappen die zijn uitgevoerd om de verbeterpunten van de website te
-              analyseren, ontwerpen, implementeren en testen.
-            </p>
+          <p>
+            Onderstaande planning toont de werkzaamheden die nodig zijn om de verbeteringen te realiseren. Elke taak is
+            gekoppeld aan een specifiek verbetervoorstel.
+          </p>
 
-            <table class="planning-table">
-              <tr>
-                <th>Taak</th>
-                <th>Duur</th>
-              </tr>
+          <table class="planning-table">
+            <tr>
+              <th>Taak</th>
+              <th>Duur</th>
+            </tr>
 
-              <tr>
-                <td>Analyse van huidige website en verbeterpunten</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Analyse van testresultaten en verbeterpunten</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Onderzoek naar Call to Action en Customer Journey</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Ontwerpen Call-to-action knop (Verbetering 1)</td>
+              <td>0.5 dag</td>
+            </tr>
 
-              <tr>
-                <td>Ontwerpen van nieuwe Call to Action knop</td>
-                <td>0.5 dag</td>
-              </tr>
+            <tr>
+              <td>Implementeren Call-to-action op homepage (Verbetering 1)</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Ontwerpen verbeterde Customer Journey structuur</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Ontwerpen verbeterde customer journey (Verbetering 2)</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Implementeren Call to Action op homepage</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Implementeren nieuwe navigatiestructuur (Verbetering 2)</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Implementeren verbeterde navigatie richting contactpagina</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Implementeren realtime validatie (Verbetering 3)</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Verbeteren van het contactformulier (validatie en feedback)</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Implementeren bevestigingsmail (Verbetering 4)</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Testen van nieuwe functionaliteiten</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Testen van alle verbeteringen</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Verwerken van eventuele bugs of aanpassingen</td>
-                <td>1 dag</td>
-              </tr>
+            <tr>
+              <td>Bugfixes en optimalisaties</td>
+              <td>1 dag</td>
+            </tr>
 
-              <tr>
-                <td>Oplevering van verbeterde website</td>
-                <td>1 dag</td>
-              </tr>
-            </table>
-          </div>
-
-          <!-- RESULTAAT -->
-
-          <div class="resultaat">
-            <h2>Resultaat</h2>
-
-            <p>
-              Door de analyse van de website zijn verschillende verbeterpunten gevonden die de gebruiksvriendelijkheid
-              en effectiviteit van de website kunnen verbeteren. Download hieronder het volledige document met de
-              analyse, verbetervoorstellen en planning van de verbeteringen.
-            </p>
-            <div class="result-buttons">
-              <a href="../assets/B1-K1-W5.docx" class="btn-primary"> Download verbetervoorstellen </a>
-            </div>
-          </div>
-
-          <script src="../js/tabs.js"></script>
+            <tr>
+              <td>Oplevering van de verbeterde website</td>
+              <td>1 dag</td>
+            </tr>
+          </table>
         </div>
+
+        <!-- RESULTAAT -->
+
+        <div class="resultaat">
+          <h2>Resultaat</h2>
+
+          <p>
+            Door de analyse van de website zijn verschillende verbeterpunten gevonden die de gebruiksvriendelijkheid en
+            effectiviteit van de website kunnen verbeteren. Download hieronder het volledige document met de analyse,
+            verbetervoorstellen en planning van de verbeteringen.
+          </p>
+          <div class="result-buttons">
+            <a href="../assets/B1-K1-W5.docx" class="btn-primary"> Download verbetervoorstellen </a>
+          </div>
+        </div>
+
+        <script src="../js/tabs.js"></script>
       </div>
     </section>
   </body>
