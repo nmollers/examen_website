@@ -128,24 +128,23 @@
                 <ul class="onderbouwing-lijst">
                   <li>
                     <strong>Haalbaarheid</strong><br />
-                    De functionaliteiten in het use case diagram, zoals navigeren door de website, het bekijken van
-                    video's en het gebruiken van het contactformulier, zijn eenvoudig te realiseren. Deze
-                    functionaliteiten vereisen geen complexe backend en kunnen grotendeels met HTML, CSS en JavaScript
-                    worden ontwikkeld.
+                    - Het diagram laat precies zien wat de website moet kunnen, zo weet iedereen wat er gemaakt wordt en wordt er niet ineens meer gebouwd dan gepland <br>
+                    - Alles wat in het diagram staat kan gemaakt worden met gewone webbouwtechnieken, het is dus niet te moeilijk om te maken<br>
+                    - Je kunt het diagram gebruiken als een soort checklist tijdens het bouwen
                   </li>
 
                   <li>
                     <strong>Privacy (AVG)</strong><br />
-                    Gebruikers hoeven alleen persoonsgegevens in te vullen wanneer zij contact willen opnemen via het
-                    contactformulier. De website vraagt geen onnodige informatie en verwerkt alleen gegevens die
-                    noodzakelijk zijn voor communicatie.
+                    - In het diagram is goed te zien dat gebruikers alleen gegevens invullen als ze contact opnemen, meer hoeft niet <br>
+                    - Er wordt alleen gevraagd wat echt nodig is, net zoals je niet je huisadres geeft als iemand alleen je naam vraagt <br>
+                    - Dit laat zien dat er vanaf het begin nagedacht is over de privacy van gebruikers
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    De gebruikersinterface wordt beschermd tegen beveiligingsrisico’s zoals Cross-Site Scripting (XSS)
-                    door invoervelden te filteren en te valideren. Daarnaast tonen foutmeldingen geen technische
-                    details, waardoor informatielekken worden voorkomen.
+                    - Het diagram laat zien waar gebruikers iets kunnen invullen op de website, dat zijn precies de plekken waar hackers problemen kunnen veroorzaken<br />
+                    - Doordat die plekken vroeg in kaart zijn gebracht, kan er op tijd voor gezorgd worden dat kwaadaardige tekst niet wordt uitgevoerd<br />
+                    - Zo hoef je achteraf niet alles opnieuw te controleren, want je wist al waar je op moest letten
                   </li>
                 </ul>
               </div>
@@ -159,24 +158,23 @@
                 <ul class="onderbouwing-lijst">
                   <li>
                     <strong>Haalbaarheid</strong><br />
-                    De programmalogica van de website is eenvoudig en overzichtelijk. Gebruikers navigeren vanaf de
-                    homepage naar verschillende subpagina’s en kunnen via een contactformulier contact opnemen met de
-                    opdrachtgever. Deze logica kan eenvoudig worden geïmplementeerd met standaard webtechnieken zoals
-                    HTML, CSS en JavaScript.
+                    - De flowchart laat zien dat de website simpel in elkaar zit, je gaat van de homepage naar een pagina en dat is het<br>
+                    - Alles wat in de flowchart staat kan gebouwd worden met gewone webbouwtechnieken, er is geen ingewikkelde technologie nodig<br>
+                    - De stappen in de flowchart zijn duidelijk en logisch, waardoor het makkelijk is om te bouwen zonder te verdwalen
                   </li>
 
                   <li>
                     <strong>Privacy (AVG)</strong><br />
-                    Persoonsgegevens worden alleen verwerkt wanneer een gebruiker vrijwillig het contactformulier
-                    invult. De ingevoerde gegevens worden uitsluitend gebruikt om contact op te nemen met de gebruiker
-                    en worden niet voor andere doeleinden opgeslagen of gedeeld.
+                    - De flowchart laat zien dat gebruikers zelf kiezen of ze gegevens invullen, niemand wordt gedwongen<br />
+                    - De gegevens die worden ingevuld worden alleen gebruikt om terug te reageren, net zoals een brief die je stuurt alleen gelezen wordt door de ontvanger<br />
+                    - De gegevens worden nergens anders voor gebruikt of opgeslagen, wat betekent dat de privacy van gebruikers goed beschermd is
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    De programmalogica bevat invoervalidatie om ongeldige of schadelijke invoer te voorkomen. Daarnaast
-                    wordt de website via HTTPS aangeboden voor veilige dataverzending. Ook zijn 404-pagina’s ingericht
-                    zodat gebruikers geen toegang krijgen tot niet-bestaande routes of pagina’s.
+                    - De flowchart laat zien dat er wordt gecontroleerd of ingevulde gegevens kloppen voordat ze verder gaan, zo kan er geen nare tekst binnenkomen<br />
+                    - De website gebruikt HTTPS, dit is alsof je berichten in een gesloten envelop verstuurt in plaats van op een briefkaart<br />
+                    - Als iemand een pagina probeert te bezoeken die niet bestaat krijgt hij een foutpagina te zien, zo komen mensen niet op plekken waar ze niet mogen zijn
                   </li>
                 </ul>
               </div>
@@ -202,22 +200,23 @@
                 <ul class="onderbouwing-lijst">
                   <li>
                     <strong>Haalbaarheid</strong><br />
-                    Het gegevensmodel bevat drie klassen: <em>Page</em>, <em>ContactForm</em> en <em>VideoPlayer</em>.
-                    Dit is een eenvoudige structuur die goed te implementeren is met HTML, CSS en JavaScript. Hierdoor
-                    blijft de applicatie technisch haalbaar en eenvoudig te onderhouden.
+                    - Het klassendiagram heeft maar drie onderdelen, dat is overzichtelijk en niet te veel om te bouwen<br />
+                    - De drie klassen sluiten precies aan op wat de website nodig heeft, niet meer en niet minder<br />
+                    - Doordat de structuur simpel is, is het later ook makkelijk om iets aan te passen of toe te voegen
                   </li>
 
                   <li>
                     <strong>Privacy (AVG)</strong><br />
-                    De website verwerkt alleen noodzakelijke persoonsgegevens via het contactformulier (naam, e-mail en
-                    bericht). Deze gegevens worden uitsluitend gebruikt om contact op te nemen met de gebruiker.
+                    - In het klassendiagram is goed te zien dat alleen de contactformulier klasse persoonsgegevens bevat, de rest van de website raakt geen persoonlijke informatie aan<br />
+                    - Er worden alleen drie gegevens opgeslagen: naam, e-mail en bericht, net zoals je op een briefje alleen schrijft wat echt nodig is<br />
+                    - De gegevens worden alleen gebruikt om terug te reageren en nergens anders voor, dat is duidelijk zichtbaar in hoe de klasse is opgebouwd
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    Om beveiligingsrisico’s te beperken worden invoervelden gevalideerd en wordt de website via HTTPS
-                    aangeboden. Dit helpt tegen injectie-aanvallen zoals SQL-injecties en tegen onveilige dataverzending
-                    uit de OWASP Top 10.
+                    - Het klassendiagram laat zien waar invoer binnenkomt, dat zijn precies de plekken waar op SQL-injecties en andere aanvallen gelet moet worden<br />
+                    - Doordat dit vroeg in het ontwerp is vastgelegd, weet je als ontwikkelaar meteen waar je invoervalidatie moet toevoegen<br />
+                    - De website gebruikt HTTPS, dit zorgt ervoor dat gegevens die verstuurd worden niet door anderen onderschept kunnen worden, alsof je een geheim slotje op je berichten zet
                   </li>
                 </ul>
               </div>
@@ -259,23 +258,6 @@
           </div>
         </div>
       </div>
-
-      <!-- RESULTAAT -->
-
-      <div class="resultaat">
-        <h2>Resultaat / Eindproduct</h2>
-
-        <p>
-          Het resultaat is een compleet software ontwerp met diagrammen, wireframes en een technische structuur van de
-          applicatie.
-        </p>
-
-        <div class="result-buttons">
-          <a href="../assets/B1-K1-W2.docx" class="btn-outline"> Download documentatie </a>
-        </div>
-      </div>
-    </section>
-
     <script src="../js/tabs.js"></script>
   </body>
 </html>
