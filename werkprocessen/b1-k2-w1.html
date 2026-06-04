@@ -7,6 +7,39 @@
     <title>B1-K2-W1 | Voert overleg</title>
 
     <link rel="stylesheet" href="../css/style.css" />
+
+    <style>
+      /* 2x2 screenshot grid */
+      .screenshots-2x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .screenshots-2x2 .screenshot-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+      }
+
+      /* PDF viewer */
+      .pdf-viewer {
+        width: 100%;
+        height: 800px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      /* Responsive: op mobiel onder elkaar */
+      @media (max-width: 600px) {
+        .screenshots-2x2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -33,10 +66,9 @@
       <h1>Voert overleg</h1>
 
       <p class="intro">
-        Tijdens mijn stage heb ik actief deelgenomen aan overlegmomenten met mijn stagebegeleider. 
-        Deze overleggen zijn vastgelegd in de vorm van een debriefing, 
+        Tijdens mijn stage heb ik actief deelgenomen aan overlegmomenten met mijn stagebegeleider.
+        Deze overleggen zijn vastgelegd in de vorm van een debriefing,
         waarin de besproken onderwerpen, gemaakte afspraken, actiepunten en mijn eigen bijdrage zijn gedocumenteerd.
-        <br>
       </p>
 
       <!-- DEBRIEFING -->
@@ -46,8 +78,6 @@
         <p>
           In deze debriefing is een overleg uitgewerkt met mijn stagebegeleider over de marketingaanpak van de shared screens.
           Tijdens dit overleg heb ik actief deelgenomen door vragen te stellen en verbeterideeën in te brengen.
-          <br>
-          <br>
         </p>
 
         <h3>Mijn bijdrage tijdens het overleg</h3>
@@ -57,11 +87,7 @@
           te presenteren door middel van use-cases. Hierdoor wordt het voor bezoekers direct duidelijk wat er mogelijk is.
         </p>
 
-        <p>
-          Daarnaast heb ik vragen gesteld over:
-          <br>
-          <br>
-        </p>
+        <p>Daarnaast heb ik vragen gesteld over:</p>
 
         <ul class="onderbouwing-lijst">
           <li>Het verschil tussen touchscreen en standaard schermen</li>
@@ -73,34 +99,55 @@
           Deze input heeft geleid tot concrete actiepunten, zoals het duidelijker presenteren van toepassingen,
           het benadrukken van video en het zichtbaar maken van de touchscreen functionaliteit op de website.
         </p>
-
-        <div class="result-buttons">
-          <a href="../assets/Debriefing Shared Screens 26-03.docx" class="btn-primary">Bekijk volledige debriefing</a>
-        </div>
       </div>
 
       <!-- ONDERSTEUNEND BEWIJS -->
-      <div class="info-card">
+      <div class="bewijs-card">
         <h2>Ondersteunend bewijs</h2>
 
-          <div class="screenshot-card">
-            <h3>Communicatie</h3>
-            <p>Te zien dat ik mijn stagebegeleider actief op de hoogte hou over de voortgang.</p>
-            <br>
-            <img src="../assets/voortgangmail1.png" />
-          </div>
+        <div class="tabs">
+          <button class="tab active" data-tab="screenshots">Screenshots</button>
+          <button class="tab" data-tab="debriefing">Debriefing</button>
+        </div>
 
-          <div class="screenshot-card">
-            <img src="../assets/voortgangmail2.png" />
-          </div>
+        <!-- SCREENSHOTS TAB -->
+        <div class="tab-content active" id="screenshots">
+          <h3>Communicatie</h3>
+          <p>Te zien dat ik mijn stagebegeleider actief op de hoogte hou over de voortgang.</p>
 
-          <div class="screenshot-card">
-            <img src="../assets/voortgangmail3.png" />
+          <div class="screenshots-2x2">
+            <div class="screenshot-card">
+              <img src="../assets/voortgangmail1.png" alt="Voortgang mail 1" />
+            </div>
+            <div class="screenshot-card">
+              <img src="../assets/voortgangmail2.png" alt="Voortgang mail 2" />
+            </div>
+            <div class="screenshot-card">
+              <img src="../assets/voortgangmail3.png" alt="Voortgang mail 3" />
+            </div>
+            <div class="screenshot-card">
+              <img src="../assets/voortgangmail4.png" alt="Voortgang mail 4" />
+            </div>
           </div>
+        </div>
 
-          <div class="screenshot-card">
-            <img src="../assets/voortgangmail4.png" />
-          </div>
+        <!-- DEBRIEFING TAB -->
+        <div class="tab-content" id="debriefing">
+          <h3>Volledige debriefing</h3>
+          <p>Hieronder is de volledige debriefing direct leesbaar:</p>
+
+          <iframe
+            class="pdf-viewer"
+            src="../assets/Swarte Schaap/Debriefing Shared Screens 26-03 3.pdf"
+            type="application/pdf"
+          >
+            <p>
+              Je browser ondersteunt geen PDF weergave.
+              <a href="../assets/Swarte Schaap/Debriefing Shared Screens 26-03 3.pdf" target="_blank">
+                Klik hier om de PDF te openen.
+              </a>
+            </p>
+          </iframe>
         </div>
       </div>
 
