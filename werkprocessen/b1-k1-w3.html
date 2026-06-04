@@ -90,7 +90,9 @@
           <li>Homepage met navigatie naar verschillende subpagina's</li>
           <li>Subpagina's met informatie voor verschillende doelgroepen</li>
           <li>Contactformulier waarmee gebruikers een bericht kunnen sturen</li>
-          <li>Responsieve layout zodat de website werkt op desktop en mobiel</li>
+          <li>
+            Responsieve layout zodat de website werkt op desktop en mobiel
+          </li>
           <li>Integratie van video's op de website</li>
         </ul>
       </div>
@@ -210,17 +212,16 @@
         <!-- CODE -->
         <div class="tab-content" id="code">
           <div class="info-card">
-            <h2>To-Do List in React </h2>
+            <h2>To-Do List in React</h2>
             <p>
               Als bewijslast heb ik een to-do list applicatie ontwikkeld in
-              React. Deze code is een voorbeeld van mijn
-              programmeervaardigheden en mijn vermogen om een functionele
-              applicatie te bouwen. Tijdens mijn stage bij Mouw-IT
-              heb ik gewerkt met Laravel en React, maar door omstandigheden
-              buiten mijn controle heb ik hier helaas geen code van kunnen
-              bewaren. Om alsnog mijn technische kennis aan te tonen heb ik
-              deze applicatie zelfstandig ontwikkeld.
-              <br>
+              React. Deze code is een voorbeeld van mijn programmeervaardigheden
+              en mijn vermogen om een functionele applicatie te bouwen. Tijdens
+              mijn stage bij Mouw-IT heb ik gewerkt met Laravel en React, maar
+              door omstandigheden buiten mijn controle heb ik hier helaas geen
+              code van kunnen bewaren. Om alsnog mijn technische kennis aan te
+              tonen heb ik deze applicatie zelfstandig ontwikkeld.
+              <br />
             </p>
 
             <!-- CODE SNIPPET -->
@@ -232,50 +233,39 @@
 // useState is een React hook waarmee we data kunnen opslaan en updaten
 import { useState } from "react";
 
-// ─── Interface ───────────────────────────────────────────────────────────────
-
-/**
- * Beschrijft hoe een to-do item eruit ziet.
- * TypeScript gebruikt dit om fouten te voorkomen.
- */
-interface TodoItem {
-  id: number;       // Uniek nummer per taak
-  task: string;     // Omschrijving van de taak
-  done: boolean;    // true = afgerond, false = nog te doen
-}
-
 // ─── Component ───────────────────────────────────────────────────────────────
 
 /**
  * TodoList component — beheert en toont een lijst van taken.
- * TSX combineert TypeScript met React's JSX syntax.
+ * Dit is puur React met JSX, zonder TypeScript.
  */
 export default function TodoList() {
 
-  // Sla alle taken op — TypeScript weet dat dit een array van TodoItems is
-  const [items, setItems] = useState&lt;TodoItem[]&gt;([]);
+  // Sla alle taken op in een array, begint leeg
+  const [items, setItems] = useState([]);
 
-  // Sla de tekst op die de gebruiker typt, altijd een string
-  const [input, setInput] = useState&lt;string&gt;("");
+  // Sla de tekst op die de gebruiker typt in het invoerveld
+  const [input, setInput] = useState("");
 
   // Telt mee welk ID het volgende item krijgt, begint op 1
-  const [nextId, setNextId] = useState&lt;number&gt;(1);
+  const [nextId, setNextId] = useState(1);
 
   // ─── Functies ───────────────────────────────────────────────────────────────
 
   /**
    * Voegt een nieuwe taak toe aan de lijst.
+   * Wordt aangeroepen als de gebruiker op "Toevoegen" klikt.
    */
-  function addTask(): void {
+  function addTask() {
 
     // Als het invoerveld leeg is, doe dan niets
     if (!input.trim()) return;
 
-    // Maak een nieuw object aan op basis van de TodoItem interface
-    const newItem: TodoItem = {
-      id: nextId,     // Geef het item een uniek ID
-      task: input,    // Gebruik de tekst uit het invoerveld
-      done: false,    // Nieuwe taken zijn standaard niet afgerond
+    // Maak een nieuw taak object aan
+    const newItem = {
+      id: nextId,    // Geef het item een uniek ID
+      task: input,   // Gebruik de tekst uit het invoerveld
+      done: false,   // Nieuwe taken zijn standaard niet afgerond
     };
 
     // Voeg het nieuwe item toe — spread zorgt dat oude items bewaard blijven
@@ -291,27 +281,29 @@ export default function TodoList() {
   /**
    * Markeert een taak als afgerond of zet hem terug.
    */
-  function completeTask(id: number): void {
+  function completeTask(id) {
 
-    // Wissel done om voor het item met dit ID
-    const updated: TodoItem[] = items.map((item) =>
+    // Loop door alle items en wissel done om voor het juiste item
+    const updated = items.map((item) =>
       item.id === id ? { ...item, done: !item.done } : item
     );
 
+    // Sla de bijgewerkte lijst op in de state
     setItems(updated);
   }
 
   /**
-   * Verwijdert een taak uit de lijst.
+   * Verwijdert een taak permanent uit de lijst.
    */
-  function deleteTask(id: number): void {
+  function deleteTask(id) {
 
-    // Filter het item met dit ID eruit
+    // Filter het item met dit ID eruit en sla de rest op
     setItems(items.filter((item) => item.id !== id));
   }
 
   // ─── UI ─────────────────────────────────────────────────────────────────────
 
+  // Wat de gebruiker ziet — React geeft dit terug als HTML
   return (
     &lt;div&gt;
       &lt;h2&gt;To-Do Lijst&lt;/h2&gt;
@@ -319,8 +311,8 @@ export default function TodoList() {
       {/* Invoerveld waar de gebruiker een taak intypt */}
       &lt;input
         type="text"
-        value={input}
-        onChange={(e: React.ChangeEvent&lt;HTMLInputElement&gt;) =&gt; setInput(e.target.value)}
+        value={input}                              // Gekoppeld aan de input state
+        onChange={(e) =&gt; setInput(e.target.value)} // Update state bij elke toetsaanslag
         placeholder="Voer een taak in..."
       /&gt;
 
@@ -329,41 +321,53 @@ export default function TodoList() {
 
       {/* Loop door alle items en toon ze als een lijst */}
       &lt;ul&gt;
-        {items.map((item: TodoItem) =&gt; (
-          &lt;li key={item.id}&gt;
+        {items.map((item) =&gt; (
+          &lt;li key={item.id}&gt; {/* key is verplicht in React bij een lijst */}
+
+            {/* Taak tekst met doorstreping als het afgerond is */}
             &lt;span style={{ textDecoration: item.done ? "line-through" : "none" }}&gt;
               {item.task}
             &lt;/span&gt;
+
+            {/* Knop om de taak af te ronden of terug te zetten */}
             &lt;button onClick={() =&gt; completeTask(item.id)}&gt;
               {item.done ? "↩ Terugzetten" : "✅ Afgerond"}
             &lt;/button&gt;
+
+            {/* Knop om de taak te verwijderen */}
             &lt;button onClick={() =&gt; deleteTask(item.id)}&gt;❌ Verwijderen&lt;/button&gt;
+
           &lt;/li&gt;
         ))}
       &lt;/ul&gt;
     &lt;/div&gt;
   );
 }
-              </code></pre>
+  </code></pre>
             </div>
 
             <!-- WERKENDE DEMO -->
-            <h3 style="margin-top: 2rem;">Werkende demo</h3>
+            <h3 style="margin-top: 2rem">Werkende demo</h3>
             <p>Hieronder is de to-do list ook daadwerkelijk werkend te zien:</p>
 
-            <div id="todo-demo" style="margin-top: 1rem;">
-              <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+            <div id="todo-demo" style="margin-top: 1rem">
+              <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
                 <input
                   type="text"
                   id="todo-input"
                   placeholder="Voer een taak in..."
-                  style="flex: 1; padding: 0.5rem; border-radius: 6px; border: 1px solid #ccc;"
+                  style="
+                    flex: 1;
+                    padding: 0.5rem;
+                    border-radius: 6px;
+                    border: 1px solid #ccc;
+                  "
                 />
-                <button onclick="addTask()" style="padding: 0.5rem 1rem;">
+                <button onclick="addTask()" style="padding: 0.5rem 1rem">
                   Toevoegen
                 </button>
               </div>
-              <ul id="todo-list" style="list-style: none; padding: 0;"></ul>
+              <ul id="todo-list" style="list-style: none; padding: 0"></ul>
             </div>
 
             <script>
@@ -382,9 +386,9 @@ export default function TodoList() {
 
                 // Maak een nieuw taak object aan
                 const newItem = {
-                  id: nextId++,       // Uniek ID, daarna ophogen
-                  task: input.value,  // Tekst uit het invoerveld
-                  done: false,        // Standaard niet afgerond
+                  id: nextId++, // Uniek ID, daarna ophogen
+                  task: input.value, // Tekst uit het invoerveld
+                  done: false, // Standaard niet afgerond
                 };
 
                 // Voeg toe aan de array
@@ -401,7 +405,7 @@ export default function TodoList() {
               function completeTask(id) {
                 // Zoek het item en wissel done om
                 items = items.map((item) =>
-                  item.id === id ? { ...item, done: !item.done } : item
+                  item.id === id ? { ...item, done: !item.done } : item,
                 );
                 renderList();
               }
@@ -428,25 +432,27 @@ export default function TodoList() {
 
                   // Taak tekst met doorstreping als afgerond
                   li.innerHTML = `
-                    <span style="flex:1; text-decoration:${item.done ? "line-through" : "none"}">
-                      ${item.task}
-                    </span>
-                    <button onclick="completeTask(${item.id})" style="padding:0.3rem 0.6rem;">
-                      ${item.done ? "↩ Terugzetten" : "✅ Afgerond"}
-                    </button>
-                    <button onclick="deleteTask(${item.id})" style="padding:0.3rem 0.6rem;">
-                      ❌ Verwijderen
-                    </button>
-                  `;
+        <span style="flex:1; text-decoration:${item.done ? "line-through" : "none"}">
+          ${item.task}
+        </span>
+        <button onclick="completeTask(${item.id})" style="padding:0.3rem 0.6rem;">
+          ${item.done ? "↩ Terugzetten" : "✅ Afgerond"}
+        </button>
+        <button onclick="deleteTask(${item.id})" style="padding:0.3rem 0.6rem;">
+          ❌ Verwijderen
+        </button>
+      `;
 
                   list.appendChild(li);
                 });
               }
 
               // Toevoegen met Enter toets
-              document.getElementById("todo-input").addEventListener("keydown", function (e) {
-                if (e.key === "Enter") addTask();
-              });
+              document
+                .getElementById("todo-input")
+                .addEventListener("keydown", function (e) {
+                  if (e.key === "Enter") addTask();
+                });
             </script>
           </div>
         </div>
