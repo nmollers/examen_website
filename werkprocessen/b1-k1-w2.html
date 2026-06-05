@@ -129,22 +129,22 @@
                   <li>
                     <strong>Haalbaarheid</strong><br />
                     - Het diagram laat precies zien wat de website moet kunnen, zo weet iedereen wat er gemaakt wordt en wordt er niet ineens meer gebouwd dan gepland <br>
-                    - Alles wat in het diagram staat kan gemaakt worden met gewone webbouwtechnieken, het is dus niet te moeilijk om te maken<br>
+                    - Alles wat in het diagram staat kan gemaakt worden met gewone webbouwtechnieken (HTML, CSS, JavaScript), het is dus niet te moeilijk om te maken<br>
                     - Je kunt het diagram gebruiken als een soort checklist tijdens het bouwen
                   </li>
 
                   <li>
                     <strong>Privacy (AVG)</strong><br />
-                    - In het diagram is goed te zien dat gebruikers alleen gegevens invullen als ze contact opnemen, meer hoeft niet <br>
-                    - Er wordt alleen gevraagd wat echt nodig is, net zoals je niet je huisadres geeft als iemand alleen je naam vraagt <br>
+                    - Van de vier use cases vraagt er maar één om gegevens van de gebruiker, namelijk het contactformulier. De rest verzamelt niets. <br>
+                    - Dit past bij het AVG-principe van dataminimalisatie: je vraagt alleen wat je echt nodig hebt, niet meer. <br>
                     - Dit laat zien dat er vanaf het begin nagedacht is over de privacy van gebruikers
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    - Het diagram laat zien waar gebruikers iets kunnen invullen op de website, dat zijn precies de plekken waar hackers problemen kunnen veroorzaken<br />
-                    - Doordat die plekken vroeg in kaart zijn gebracht, kan er op tijd voor gezorgd worden dat kwaadaardige tekst niet wordt uitgevoerd<br />
-                    - Zo hoef je achteraf niet alles opnieuw te controleren, want je wist al waar je op moest letten
+                    - Het diagram laat direct zien waar gebruikers iets kunnen invoeren op de website, dat is het contactformulier.n<br />
+                    - Dat is precies de plek waar aanvallers schadelijke tekst kunnen proberen in te voeren, dit heet injection en staat in de OWASP Top 3 van meest voorkomende beveiligingsrisico's.<br />
+                    - Omdat die plek vroeg bekend is, kunnen beveiligingsmaatregelen zoals invoercontrole en spambeveiliging van het begin af aan worden toegepast in plaats van daar later achter te komen.
                   </li>
                 </ul>
               </div>
@@ -158,7 +158,7 @@
                 <ul class="onderbouwing-lijst">
                   <li>
                     <strong>Haalbaarheid</strong><br />
-                    - De flowchart laat zien dat de website simpel in elkaar zit, je gaat van de homepage naar een pagina en dat is het<br>
+                    - De flowchart laat zien dat de website simpel in elkaar zit, je gaat van de homepage naar een subpagina of contactpagina<br>
                     - Alles wat in de flowchart staat kan gebouwd worden met gewone webbouwtechnieken, er is geen ingewikkelde technologie nodig<br>
                     - De stappen in de flowchart zijn duidelijk en logisch, waardoor het makkelijk is om te bouwen zonder te verdwalen
                   </li>
@@ -166,15 +166,15 @@
                   <li>
                     <strong>Privacy (AVG)</strong><br />
                     - De flowchart laat zien dat gebruikers zelf kiezen of ze gegevens invullen, niemand wordt gedwongen<br />
-                    - De gegevens die worden ingevuld worden alleen gebruikt om terug te reageren, net zoals een brief die je stuurt alleen gelezen wordt door de ontvanger<br />
-                    - De gegevens worden nergens anders voor gebruikt of opgeslagen, wat betekent dat de privacy van gebruikers goed beschermd is
+                    - Volgens het AVG-principe van doelbinding mogen ingevulde gegevens alleen gebruikt worden voor het doel waarvoor ze zijn verzameld, in dit geval uitsluitend om te reageren op het contactverzoek.<br />
+                    - De flowchart toont geen stappen waarbij gegevens worden doorgestuurd naar derden of opgeslagen voor andere doeleinden, wat aansluit bij het principe van dataminimalisatie.
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    - De flowchart laat zien dat er wordt gecontroleerd of ingevulde gegevens kloppen voordat ze verder gaan, zo kan er geen nare tekst binnenkomen<br />
-                    - De website gebruikt HTTPS, dit is alsof je berichten in een gesloten envelop verstuurt in plaats van op een briefkaart<br />
-                    - Als iemand een pagina probeert te bezoeken die niet bestaat krijgt hij een foutpagina te zien, zo komen mensen niet op plekken waar ze niet mogen zijn
+                    - De flowchart toont een validatiestap bij het contactformulier, waarbij invoer wordt gecontroleerd voordat deze verder wordt verwerkt. Dit is een directe maatregel tegen OWASP A03, injection-aanvallen.<br />
+                    - De website maakt gebruik van HTTPS, waardoor alle communicatie tussen gebruiker en server versleuteld is en niet onderschept kan worden door derden.<br />
+                    - Onbekende of niet-bestaande paginaverzoeken worden opgevangen met een foutpagina, wat voorkomt dat gebruikers toegang krijgen tot niet-bedoelde delen van de website en aansluit bij OWASP A01, broken access control.
                   </li>
                 </ul>
               </div>
@@ -207,16 +207,17 @@
 
                   <li>
                     <strong>Privacy (AVG)</strong><br />
-                    - In het klassendiagram is goed te zien dat alleen de contactformulier klasse persoonsgegevens bevat, de rest van de website raakt geen persoonlijke informatie aan<br />
-                    - Er worden alleen drie gegevens opgeslagen: naam, e-mail en bericht, net zoals je op een briefje alleen schrijft wat echt nodig is<br />
-                    - De gegevens worden alleen gebruikt om terug te reageren en nergens anders voor, dat is duidelijk zichtbaar in hoe de klasse is opgebouwd
+                    - Het klassendiagram maakt zichtbaar dat alleen de contactformulier-klasse persoonsgegevens bevat. De overige klassen verwerken geen persoonlijke informatie, wat aansluit bij het AVG-principe van dataminimalisatie.<br />
+                    - De contactformulier-klasse slaat uitsluitend naam, e-mailadres, telefoonnummer en bericht op. Dit zijn de minimale gegevens die nodig zijn om een contactverzoek te verwerken, niet meer.<br />
+                    - De gegevens worden alleen gebruikt om terug te reageren en nergens anders voor ook dit is weer in lijn met het AVG-principe van doelbinding. Er is geen opslag van gegevens voor marketing of andere doeleinden, wat de privacy van gebruikers verder beschermt.
                   </li>
 
                   <li>
                     <strong>Security (OWASP)</strong><br />
-                    - Het klassendiagram laat zien waar invoer binnenkomt, dat zijn precies de plekken waar op SQL-injecties en andere aanvallen gelet moet worden<br />
+                    - Het klassendiagram identificeert de contactformulier-klasse als het enige invoerpunt van gebruikersdata. Dit is het voornaamste aanvalsoppervlak voor OWASP A03, waarbij aanvallers schadelijke invoer zoals SQL-injecties proberen in te sturen.
+<br />
                     - Doordat dit vroeg in het ontwerp is vastgelegd, weet je als ontwikkelaar meteen waar je invoervalidatie moet toevoegen<br />
-                    - De website gebruikt HTTPS, dit zorgt ervoor dat gegevens die verstuurd worden niet door anderen onderschept kunnen worden, alsof je een geheim slotje op je berichten zet
+                    - Het gebruik van HTTPS zorgt ervoor dat gegevens tussen de gebruiker en de server versleuteld worden verstuurd, waardoor onderschepping door derden wordt voorkomen. Dit sluit aan bij de OWASP-richtlijnen voor veilige datacommunicatie.
                   </li>
                 </ul>
               </div>
