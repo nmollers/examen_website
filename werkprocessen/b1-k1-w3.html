@@ -230,14 +230,13 @@
               <pre><code>
 // ─── Imports ─────────────────────────────────────────────────────────────────
 
-// useState is een React hook waarmee we data kunnen opslaan en updaten
+// useState is een React hook waarmee je data kunt opslaan en updaten
 import { useState } from "react";
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
 /**
- * TodoList component — beheert en toont een lijst van taken.
- * Dit is puur React met JSX, zonder TypeScript.
+ * TodoList component. beheert en toont een lijst van taken.
  */
 export default function TodoList() {
 
@@ -268,7 +267,7 @@ export default function TodoList() {
       done: false,   // Nieuwe taken zijn standaard niet afgerond
     };
 
-    // Voeg het nieuwe item toe — spread zorgt dat oude items bewaard blijven
+    // Voeg een nieuw item toe, spread(...items) zorgt dat oude items bewaard blijven
     setItems([...items, newItem]);
 
     // Verhoog het ID voor het volgende item
@@ -303,7 +302,7 @@ export default function TodoList() {
 
   // ─── UI ─────────────────────────────────────────────────────────────────────
 
-  // Wat de gebruiker ziet — React geeft dit terug als HTML
+  // Wat de gebruiker ziet op de pagina, React geeft dit terug als HTML
   return (
     &lt;div&gt;
       &lt;h2&gt;To-Do Lijst&lt;/h2&gt;
@@ -311,7 +310,7 @@ export default function TodoList() {
       {/* Invoerveld waar de gebruiker een taak intypt */}
       &lt;input
         type="text"
-        value={input}                              // Gekoppeld aan de input state
+        value={input}                                  // Gekoppeld aan de input state
         onChange={(e) =&gt; setInput(e.target.value)} // Update state bij elke toetsaanslag
         placeholder="Voer een taak in..."
       /&gt;
@@ -348,7 +347,6 @@ export default function TodoList() {
 
             <!-- WERKENDE DEMO -->
             <h3 style="margin-top: 2rem">Werkende demo</h3>
-            <p>Hieronder is de to-do list ook daadwerkelijk werkend te zien:</p>
 
             <div id="todo-demo" style="margin-top: 1rem">
               <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
