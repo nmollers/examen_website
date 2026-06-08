@@ -11,7 +11,6 @@
 
   <body>
     <!-- NAVBAR -->
-
     <nav class="navbar">
       <div class="nav-container">
         <div class="logo">
@@ -23,11 +22,9 @@
           <li>
             <a href="../index.html">Home</a>
           </li>
-
           <li>
             <a href="../kerntaken/b1-k1.html" class="active">B1-K1 Realiseert software</a>
           </li>
-
           <li>
             <a href="../kerntaken/b1-k2.html">B1-K2 Werkt in team</a>
           </li>
@@ -58,13 +55,10 @@
         <div class="info-grid">
           <div>
             <h3>Mijn rol</h3>
-
             <p>Product Owner / Scrum Master — verantwoordelijk voor planning en voortgangsbewaking.</p>
           </div>
-
           <div>
             <h3>Gebruikte technieken</h3>
-
             <div class="tags">
               <span>User Stories</span>
               <span>MoSCoW Prioritering</span>
@@ -83,25 +77,41 @@
         <h2>Bewijsstukken</h2>
 
         <div class="tabs">
-          <button class="tab active" data-tab="documents">Uitganspunten van het project</button>
-
+          <button class="tab active" data-tab="screenshots1">Bewijs van overleg waaruit deze punten zijn ontstaan</button>
+          <button class="tab" data-tab="documents">Uitganspunten van het project</button>
           <button class="tab" data-tab="code">Wensen, Technische en functionele eisen</button>
-
           <button class="tab" data-tab="screenshots">Screenshots</button>
+        </div>
 
+        <!-- BEWIJS VAN OVERLEG -->
+        <div class="tab-content active" id="screenshots1">
+          <div class="screenshots-grid">
+            <div>
+              <h3>Mail 1 na het gesprek</h3>
+              <img src="../assets/MailContactThomas/mail1.png" alt="Screenshot 1" />
+              <p>Mail 1 na het gesprek dat wij nog eens samen wilde gaan zitten omdat niet alle wensen en eisen duidelijk waren.</p>
+            </div>
+            <div>
+              <h3>Mail 2 na het 2de gesprek</h3>
+              <img src="../assets/MailContactThomas/mail3.png" alt="Screenshot 2" />
+              <p>Mail 2 na het 2de gesprek waarin we nog eens duidelijk hebben gemaakt wat de wensen en eisen zijn van de klant. <br>
+              Hier ook meteen vanuit de heer Brull zijn eigen ontwerp gekregen.</p>
+            </div>
+            <div>
+              <h3>Mail 3 voor een 3de gesprek</h3>
+              <img src="../assets/MailContactThomas/mail4.png" alt="Screenshot 3" />
+              <p>Mail 3 waarin we nog een keer hebben afgesproken om te bekekijken of wij alle wensen en eisen goed hebben begrepen en of er nog dingen zijn die we over het hoofd hebben gezien.</p>
+            </div>
+          </div>
         </div>
 
         <!-- DOCUMENTEN -->
-        <div class="tab-content active" id="documents">
+        <div class="tab-content" id="documents">
           <ul class="project-list">
             <li>De huidige website wordt vervangen door een nieuwe website.</li>
-
             <li>Hosting en domeinnaam zijn al in gebruik en blijven ongewijzigd.</li>
-
             <li>De website wordt in eerste instantie alleen in het Nederlands ontwikkeld.</li>
-
             <li>De content van de website (teksten, afbeeldingen en video's) wordt later door de klant aangeleverd.</li>
-
             <li>De website moet toegankelijk zijn op zowel desktop als mobiele apparaten.</li>
           </ul>
         </div>
@@ -119,10 +129,10 @@
             <br>
             <h3>Functionele eisen</h3>
             <li>Een homepagina met 4 duidelijke knoppen die bezoekers naar relevante informatie stuurt</li>
-            <li>Subpagina’s met als doel een bepaalde doelgroep te informeren</li>
+            <li>Subpagina's met als doel een bepaalde doelgroep te informeren</li>
             <li>Een contactformulier waar bezoekers eenvoudig contact met het bedrijf kunnen opnemen</li>
             <li>Een bevestigingsbericht nadat een bezoeker het contactformulier heeft ingevuld en gestuurd</li>
-            <li>De optie om video’s toe te voegen aan de informatiepagina’s</li>
+            <li>De optie om video's toe te voegen aan de informatiepagina's</li>
             <li>
               Een duidelijke en eenvoudige navigatiestructuur zodat gebruikers makkelijk de juiste informatie vinden (4
               grote knoppen op de landingspage)
@@ -131,7 +141,6 @@
         </div>
 
         <!-- SCREENSHOTS -->
-
         <div class="tab-content" id="screenshots">
           <div class="screenshots-grid">
             <div>
@@ -151,7 +160,10 @@
             </div>
           </div>
         </div>
-      </div>
+
+      </div><!-- /.bewijs-card -->
+    </section><!-- /.bewijs-page -->
+
     <script src="../js/tabs.js"></script>
   </body>
 </html>
